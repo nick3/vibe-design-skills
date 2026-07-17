@@ -9,7 +9,9 @@ Contributions should improve the generality, safety, evidence quality, or usabil
 - Distinguish a reusable workflow improvement from a project-specific rule that belongs in the target product's generated documents.
 - Cite first-party specifications or source material for externally derived claims.
 
-Until a root open-source license is selected, issue proposals and review feedback are welcome, but external pull requests will not be merged. This restriction will be removed before the first formal release.
+By submitting a contribution, you agree that it may be distributed under the
+repository's [MIT License](LICENSE). Do not contribute material that you do not
+have the right to license on those terms.
 
 ## Skill package rules
 

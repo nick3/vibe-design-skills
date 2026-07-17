@@ -4,6 +4,10 @@
 - 本地仓库基线：`nick3/vibe-design-skills@91659d8`
 - 官方 CLI 基线：`skills@1.5.19`，`vercel-labs/skills@777599e1159e401b11ce4c8a57c20f09a8f1596e`
 
+> 后续状态：调查发现的 YAML 问题已修复，候选分支可发现并完整安装
+> 12/12 个 Skill；仓库所有者已于 2026-07-17 选择 MIT 许可证。本文保留
+> `91659d8` 公开基线的原始调查结论。
+
 ## 结论
 
 `nick3/vibe-design-skills` **已经具备通过**：

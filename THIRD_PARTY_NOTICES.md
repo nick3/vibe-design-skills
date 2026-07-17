@@ -9,6 +9,9 @@ The work is informed by and cites:
 - [Agent Skills specification](https://agentskills.io/specification) for portable Skill directory, metadata, progressive-disclosure, and validation conventions.
 - [Vercel Labs — `skills` CLI](https://github.com/vercel-labs/skills) for GitHub-based discovery and installation behavior.
 
-These upstream projects and publications remain subject to their own terms and licenses. References and conceptual adaptations do not transfer ownership of upstream material and do not cause this repository's eventual license to apply to those upstream works.
+These upstream projects and publications remain subject to their own terms and
+licenses. References and conceptual adaptations do not transfer ownership of
+upstream material and do not cause this repository's MIT License to apply to
+those upstream works.
 
 Detailed concept-to-Skill mappings are maintained in [skills/SOURCES.md](skills/SOURCES.md). If a future contribution copies or modifies third-party code, text, schemas, or assets, it must add the applicable copyright, license, and notice information before merge.

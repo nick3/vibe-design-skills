@@ -88,5 +88,6 @@ quality.
 ## Release safety
 
 Do not tag or publish when the worktree is dirty, CI is failing, the root
-license is unresolved, the changelog and validation report disagree, or the
-public default branch fails exact remote discovery and clean installation.
+license is missing or inconsistent, the changelog and validation report
+disagree, or the public default branch fails exact remote discovery and clean
+installation.

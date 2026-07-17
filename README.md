@@ -9,10 +9,10 @@ The suite turns design judgment into reusable product/design declarations, execu
 
 > **Status: release candidate.** Static, security, official-format, local CLI,
 > representative entrypoint, B2B reconstruction, candidate CI, and candidate
-> branch remote-install checks pass. A root license and 12/12 discovery from the
-> public default branch remain blockers for the first public preview. Rendered
-> cross-layer fixtures and independent human design review remain required for
-> stable `v1.0`.
+> branch remote-install checks pass. Only 12/12 discovery from the public
+> default branch remains as a distribution blocker for the first public
+> preview. Rendered cross-layer fixtures and independent human design review
+> remain required for stable `v1.0`.
 
 ## Install
 
@@ -210,4 +210,6 @@ Detailed adaptations and source boundaries are documented in [skills/SOURCES.md]
 
 ## License
 
-An open-source license has not yet been selected. Public visibility alone does not grant permission to copy, modify, or redistribute the contents. License selection is a blocking release decision and will be resolved before the first formal release.
+This repository is licensed under the [MIT License](LICENSE). Third-party
+specifications and publications cited by the suite remain subject to their own
+terms, as described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -2,6 +2,7 @@
   "name": "vibe-design-skills",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "description": "Validation tooling for the Vibe Design Skills suite.",
   "type": "module",
   "scripts": {

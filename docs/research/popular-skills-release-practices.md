@@ -2,6 +2,11 @@
 
 Research date: 2026-07-17
 
+> Outcome update: the repository owner selected the MIT License on 2026-07-17.
+> The candidate now passes the legal, package, security, behavioral, Linux,
+> Windows, and candidate-branch distribution gates. This document retains the
+> pre-release gap analysis that led to those changes.
+
 ## Executive conclusion
 
 A public Skills repository is ready for a formal release only when four claims are
@@ -14,9 +19,10 @@ true and continuously verifiable:
    gates that prevent regressions.
 
 The first three are the ecosystem and legal baseline. The fourth is especially
-important for `nick3/vibe-design-skills`: its README currently calls the suite a
-draft and states that behavioral comparisons and human design review are pending.
-Those promised checks must be completed before calling the suite `v1.0`.
+important for `nick3/vibe-design-skills`: its README distinguishes the public
+preview evidence from rendered cross-layer and human design review that remain
+pending. Those promised checks must be completed before calling the suite
+`v1.0`.
 
 No npm package, `package.json`, or package-registry submission is required for
 installation. The official CLI accepts GitHub `owner/repo` sources and discovers

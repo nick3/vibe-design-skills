@@ -21,6 +21,7 @@ All notable suite-level changes are documented here. The project follows [Semant
 - A non-normative B2B reconstruction fixture and governance-integrity regression test.
 - Repository-level Agent contribution instructions, deterministic LF
   normalization, and Windows portability validation.
+- An explicit MIT license for reuse, modification, and redistribution.
 
 ### Changed
 
