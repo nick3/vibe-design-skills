@@ -28,6 +28,8 @@ All notable suite-level changes are documented here. The project follows [Semant
 - Tightened bootstrap evidence handling so “not supplied” is never treated as proof that an artifact does not exist.
 - Made feature execution progressively discover project evidence before requesting domain, API, design-system, or evaluation details.
 - Updated validation dependencies to vulnerability-free versions and removed an unnecessary transitive format package.
+- Pinned every GitHub Action to an immutable current stable commit and disabled
+  an inapplicable `uv` cache with no dependency manifest.
 - Separated author self-checks from independent foundation review and separated
   advisory readiness limitations from approved release blockers.
 - Tightened reconstruction output around single-source rules, method/product
