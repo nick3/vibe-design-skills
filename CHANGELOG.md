@@ -4,6 +4,8 @@ All notable suite-level changes are documented here. The project follows [Semant
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-07-17
+
 ### Added
 
 - Codex-facing `agents/openai.yaml` metadata for all 12 Skills.
@@ -48,3 +50,6 @@ All notable suite-level changes are documented here. The project follows [Semant
   descriptive error instead of a runtime exception.
 - Split the default public-repository check from the arbitrary-source check so
   both local release verification and candidate-ref CI remain explicit.
+
+[Unreleased]: https://github.com/nick3/vibe-design-skills/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/nick3/vibe-design-skills/releases/tag/v0.1.0

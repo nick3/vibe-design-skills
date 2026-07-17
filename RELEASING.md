@@ -66,7 +66,8 @@ Static validation alone must never be presented as proof that a Skill improves d
    ```
 
 8. Confirm the remote command reports the exact catalog and no malformed Skill is skipped.
-9. Record behavioral and human-review evidence in a versioned file under `docs/releases/`.
+9. Record the behavioral evidence required for the release level, plus any
+   available human-review evidence, in a versioned file under `docs/releases/`.
 10. Move relevant changelog entries from `Unreleased` to the release version and date.
 11. Create an annotated `vX.Y.Z` tag and GitHub Release that link to the validation report.
 12. Re-run remote installation from the tag or release commit and record rollback guidance.

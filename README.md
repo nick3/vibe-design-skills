@@ -7,12 +7,11 @@ A project-agnostic Agent Skills suite for governed, evidence-based product and U
 
 The suite turns design judgment into reusable product/design declarations, executable workflows, independent evaluation, and a governed learning loop. It is informed by Alibaba Cloud Design's Vibe Designing Playbook and Google's `DESIGN.md` specification without copying a sample product's visual values, components, templates, or scoring thresholds.
 
-> **Status: release candidate.** Static, security, official-format, local CLI,
-> representative entrypoint, B2B reconstruction, candidate CI, and candidate
-> branch remote-install checks pass. Only 12/12 discovery from the public
-> default branch remains as a distribution blocker for the first public
-> preview. Rendered cross-layer fixtures and independent human design review
-> remain required for stable `v1.0`.
+> **Status: `v0.1.0` public preview.** Package, security, official-format,
+> Linux/Windows CI, local and public remote installation, representative
+> entrypoint, trigger-routing, and B2B reconstruction gates pass. Rendered
+> cross-layer fixtures and independent human design review remain required for
+> stable `v1.0`.
 
 ## Install
 
@@ -156,8 +155,10 @@ The private `package.json` and Bun lockfile are only for repository validation. 
 The release checklist additionally validates every package with the pinned
 official Agent Skills reference validator. See [RELEASING.md](RELEASING.md).
 
+The public-preview decision and complete release-gate evidence are recorded in
+the [v0.1.0 validation report](docs/releases/v0.1.0-validation.md).
 Representative with-Skill versus baseline comparisons for both orchestration
-entrypoints are recorded in the
+entrypoints are retained in the historical
 [v0.1.0-rc.1 validation report](docs/releases/v0.1.0-rc.1-validation.md).
 The final B2B reconstruction comparison scored 19/20 and 20/20 against a 15/20
 baseline in two separate review lenses; its complete iteration record is in the
