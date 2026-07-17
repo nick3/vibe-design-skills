@@ -10,6 +10,28 @@ const repoRoot = path.resolve(
 );
 const skillsRoot = path.join(repoRoot, "skills");
 const fixturesRoot = path.join(repoRoot, "tests", "fixtures");
+const installableTextExtensions = new Set([
+  ".css",
+  ".csv",
+  ".html",
+  ".js",
+  ".json",
+  ".jsx",
+  ".less",
+  ".md",
+  ".mjs",
+  ".py",
+  ".scss",
+  ".sh",
+  ".svg",
+  ".toml",
+  ".ts",
+  ".tsx",
+  ".txt",
+  ".xml",
+  ".yaml",
+  ".yml",
+]);
 
 function walkFiles(root) {
   const files = [];
@@ -32,6 +54,8 @@ test("cross-layer scenarios are complete and do not leak into Skills", () => {
   assert.ok(scenarioPaths.length >= 1);
 
   const installableContents = walkFiles(skillsRoot)
+    .filter((filePath) =>
+      installableTextExtensions.has(path.extname(filePath).toLowerCase()))
     .map((filePath) => fs.readFileSync(filePath, "utf8"))
     .join("\n")
     .toLocaleLowerCase();

@@ -12,19 +12,23 @@ const repoRoot = path.resolve(
 );
 const scorer = path.join(repoRoot, "scripts", "score-trigger-evals.mjs");
 
-function runScorer(fixture, predictions) {
+function runScorerPayload(fixture, run) {
   const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "trigger-score-test-"));
   try {
     const fixturePath = path.join(tempRoot, "fixture.json");
     const runPath = path.join(tempRoot, "run.json");
     fs.writeFileSync(fixturePath, JSON.stringify(fixture));
-    fs.writeFileSync(runPath, JSON.stringify({ predictions }));
+    fs.writeFileSync(runPath, JSON.stringify(run));
     return spawnSync(process.execPath, [scorer, runPath, fixturePath], {
       encoding: "utf8",
     });
   } finally {
     fs.rmSync(tempRoot, { recursive: true, force: true });
   }
+}
+
+function runScorer(fixture, predictions) {
+  return runScorerPayload(fixture, { predictions });
 }
 
 const fixture = {
@@ -103,4 +107,12 @@ test("rejects missing or unknown predictions", () => {
   ]);
   assert.equal(unknown.status, 1);
   assert.match(unknown.stderr, /unknown predicted Skill/u);
+});
+
+test("rejects a null prediction document with a descriptive error", () => {
+  const result = runScorerPayload(fixture, null);
+
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /must contain a JSON object/u);
+  assert.doesNotMatch(result.stderr, /TypeError/u);
 });

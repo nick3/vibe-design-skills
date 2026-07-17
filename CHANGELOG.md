@@ -39,3 +39,9 @@ All notable suite-level changes are documented here. The project follows [Semant
 ### Fixed
 
 - Corrected invalid YAML in `vibe-design-execute` that caused the official CLI to silently omit the Skill.
+- Made fixture-leakage checks skip binary assets and clean-install comparisons
+  ignore untracked operating-system metadata files.
+- Made the trigger scorer reject a `null` prediction document with a
+  descriptive error instead of a runtime exception.
+- Split the default public-repository check from the arbitrary-source check so
+  both local release verification and candidate-ref CI remain explicit.

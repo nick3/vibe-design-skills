@@ -58,4 +58,4 @@ jobs:
         if: github.event_name != 'pull_request'
         env:
           SKILLS_SOURCE: ${{ github.server_url }}/${{ github.repository }}
-        run: bun run check:remote -- "$SKILLS_SOURCE"
+        run: bun run check:source -- "$SKILLS_SOURCE"

@@ -9,7 +9,14 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const skillsRoot = path.join(repoRoot, "skills");
-const requestedSource = process.argv[2];
+const sourceArguments = process.argv.slice(2);
+if (sourceArguments.length > 1) {
+  console.error(
+    "Usage: node scripts/check-skills-cli.mjs [local-path|git-source]",
+  );
+  process.exit(2);
+}
+const requestedSource = sourceArguments[0];
 const installSource = requestedSource
   ? (
       path.isAbsolute(requestedSource) || requestedSource.startsWith(".")
@@ -18,6 +25,7 @@ const installSource = requestedSource
     )
   : repoRoot;
 const sourceLabel = requestedSource ?? "local checkout";
+const ignoredMetadataFiles = new Set([".DS_Store", "Thumbs.db"]);
 const cliEntry = path.join(
   repoRoot,
   "node_modules",
@@ -56,10 +64,11 @@ function runCli(args, cwd) {
     const stdout = [];
     const stderr = [];
     let timedOut = false;
+    const timeoutMs = requestedSource ? 120_000 : 60_000;
     const timer = setTimeout(() => {
       timedOut = true;
       child.kill("SIGKILL");
-    }, requestedSource ? 120_000 : 60_000);
+    }, timeoutMs);
 
     child.stdout.on("data", (chunk) => stdout.push(chunk));
     child.stderr.on("data", (chunk) => stderr.push(chunk));
@@ -73,6 +82,7 @@ function runCli(args, cwd) {
         status,
         signal,
         timedOut,
+        timeoutMs,
         stdout: Buffer.concat(stdout).toString("utf8"),
         stderr: Buffer.concat(stderr).toString("utf8"),
       });
@@ -91,7 +101,9 @@ function assertCliSuccess(result, operation) {
   }
 
   if (result.timedOut) {
-    throw new Error(`skills CLI ${operation} timed out after 60 seconds.`);
+    throw new Error(
+      `skills CLI ${operation} timed out after ${result.timeoutMs / 1000} seconds.`,
+    );
   }
 
   if (result.status !== 0) {
@@ -107,6 +119,9 @@ function listRelativeFiles(root) {
 
   function walk(current) {
     for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      if (ignoredMetadataFiles.has(entry.name)) {
+        continue;
+      }
       const entryPath = path.join(current, entry.name);
       if (entry.isDirectory()) {
         walk(entryPath);

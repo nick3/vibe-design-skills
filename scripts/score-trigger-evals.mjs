@@ -51,7 +51,13 @@ try {
     })));
   const caseById = new Map(cases.map((item) => [item.id, item]));
   const knownSkills = new Set(fixture.skills.map((entry) => entry.skill_name));
-  const predictions = Array.isArray(run.predictions) ? run.predictions : [];
+  if (run === null || typeof run !== "object" || Array.isArray(run)) {
+    throw new Error("Prediction file must contain a JSON object.");
+  }
+  if (!Array.isArray(run.predictions)) {
+    throw new Error("Prediction file must contain a predictions array.");
+  }
+  const predictions = run.predictions;
 
   if (predictions.length !== cases.length) {
     throw new Error(

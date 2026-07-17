@@ -8,7 +8,8 @@
     "validate": "node scripts/validate-skills.mjs",
     "test": "node --test tests/*.test.mjs",
     "check:discovery": "node scripts/check-skills-cli.mjs",
-    "check:remote": "node scripts/check-skills-cli.mjs",
+    "check:source": "node scripts/check-skills-cli.mjs",
+    "check:remote": "node scripts/check-skills-cli.mjs nick3/vibe-design-skills",
     "check": "bun run validate && bun run test && bun run check:discovery"
   },
   "engines": {
