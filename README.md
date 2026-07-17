@@ -8,10 +8,11 @@ A project-agnostic Agent Skills suite for governed, evidence-based product and U
 The suite turns design judgment into reusable product/design declarations, executable workflows, independent evaluation, and a governed learning loop. It is informed by Alibaba Cloud Design's Vibe Designing Playbook and Google's `DESIGN.md` specification without copying a sample product's visual values, components, templates, or scoring thresholds.
 
 > **Status: release candidate.** Static, security, official-format, local CLI,
-> representative entrypoint, and B2B reconstruction comparisons pass. A root
-> license, green CI on the candidate commit, and 12/12 remote discovery remain
-> blockers for the first public preview. Rendered cross-layer fixtures and
-> independent human design review remain required for stable `v1.0`.
+> representative entrypoint, B2B reconstruction, candidate CI, and candidate
+> branch remote-install checks pass. A root license and 12/12 discovery from the
+> public default branch remain blockers for the first public preview. Rendered
+> cross-layer fixtures and independent human design review remain required for
+> stable `v1.0`.
 
 ## Install
 
