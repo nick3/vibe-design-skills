@@ -68,6 +68,23 @@ Look for visually similar elements with different responsibilities, such as:
 
 For each collision define selection criteria, prohibited substitutions and migration notes.
 
+Preserve platform semantics while consolidating visual treatment:
+
+- links navigate; buttons invoke actions;
+- table, list, tree, and ARIA grid each imply different structure and keyboard
+  behavior;
+- a permission-unknown action is not automatically an approved hidden,
+  disabled, or denied state.
+
+Keep the contract neutral until interaction evidence and platform requirements
+support one semantic model. Do not name a component `Grid` merely because it
+looks tabular.
+
+When confirmation policy is unknown, do not prescribe removal, addition, or a
+universal hide/disable treatment. Record the observed behavior and policy gap,
+avoid introducing a new irreversible path, and preserve any necessary legacy
+safety control until an authorized owner decides the interaction policy.
+
 ### 3. Define the component contract
 
 Each component entry should include:
@@ -115,6 +132,10 @@ Check whether a future agent can choose correctly when presented with:
 - desktop versus narrow viewport behavior.
 
 If the documents do not answer these choices, add rules or record a gap.
+
+Before handoff, verify that every component/pattern identifier and
+cross-reference resolves to the intended entry and that names are consistent.
+Reference integrity is part of semantic correctness.
 
 ## Human approval gate
 

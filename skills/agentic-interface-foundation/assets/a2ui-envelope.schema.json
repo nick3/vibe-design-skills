@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schemas/a2ui-envelope.schema.json",
+  "$id": "https://raw.githubusercontent.com/nick3/vibe-design-skills/main/skills/agentic-interface-foundation/assets/a2ui-envelope.schema.json",
   "title": "Project-adaptable Agent-to-UI message envelope",
   "description": "Neutral starting envelope. Replace the identifier, restrict fields and values, and obtain product, engineering, security and accessibility approval before production use.",
   "type": "object",

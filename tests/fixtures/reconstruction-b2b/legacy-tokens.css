@@ -1,0 +1,27 @@
+:root {
+  --primary: #2563eb;
+  --primary-new: #1d4ed8;
+  --action-blue: #2468d8;
+  --danger: #dc2626;
+  --sla-breach: #dc2626;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --table-row: 44px;
+  --compact-table-row: 36px;
+  --comfortable-table-row: 48px;
+  --radius-button: 4px;
+  --radius-card: 8px;
+  --shadow-card: 0 1px 3px rgb(0 0 0 / 18%);
+  --shadow-panel: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+.legacy-route {
+  --primary: #1e5aa8;
+  font-family: system-ui, sans-serif;
+}
+
+.modern-route {
+  font-family: Inter, system-ui, sans-serif;
+}

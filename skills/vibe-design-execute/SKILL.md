@@ -1,6 +1,15 @@
 ---
 name: vibe-design-execute
-description: Execute a concrete product or UI design request end to end using the project's approved Vibe Design foundation: clarify the feature, choose or explore structure, create or update the real design/prototype, cover interaction states, evaluate rendered evidence, and iterate to a governed stopping point. Use this skill whenever a user asks an Agent to design, redesign, prototype, or substantially extend a screen, flow, dashboard, app, website, or agentic experience—not merely to author foundation documents. Do not use it to deploy, ship, or rewrite production systems unless the user separately authorizes those actions.
+description: >-
+  Execute a concrete product or UI design request end to end using the project's
+  approved Vibe Design foundation: clarify the feature, choose or explore
+  structure, create or update the real design/prototype, cover interaction
+  states, evaluate rendered evidence, and iterate to a governed stopping point.
+  Use this skill whenever a user asks an Agent to design, redesign, prototype,
+  or substantially extend a screen, flow, dashboard, app, website, or agentic
+  experience—not merely to author foundation documents. Do not use it to deploy,
+  ship, or rewrite production systems unless the user separately authorizes
+  those actions.
 ---
 
 # Vibe Design Execute
@@ -71,6 +80,31 @@ Inspect:
 - intended audience, platform, viewport, and maturity;
 - what is authorized: design only, prototype, implementation, or delivery.
 
+Use progressive discovery. Inspect the supplied project entry point before asking
+the user for information that the project may already contain. If no project,
+design, or runtime entry point is available, ask first for only:
+
+- the smallest artifact or repository access needed to inspect the work; and
+- any safety-critical scope ambiguity that would authorize a materially
+  different or destructive capability.
+
+At this point, do not also request a role matrix, API contract, design-system
+inventory, test plan, or evaluation policy that could be discovered after
+access. Do not propose detailed temporary domain rules as a shortcut. If the
+request already makes the destructive boundary clear, ask only for the entry
+point (or separate authorization to create an isolated, no-side-effect
+prototype).
+
+The minimal unblock response should briefly name the evidence-backed work that
+will follow—inspection of the existing structure, comparison of structural
+alternatives when the task shape is unresolved, non-ideal and accessibility
+states, and independent evaluation of a frozen rendered artifact—but must not
+draft those decisions before access.
+
+Do not require a complete governance questionnaire merely to obtain project
+access. After inspection, group only the still-material gaps into the smallest
+decision gate that can safely unlock the next phase.
+
 Create the feature run record. Mark each dependency `approved`, `draft`, `missing`, or `conflicting`.
 
 ### Gate A — Scope
@@ -84,6 +118,9 @@ Confirm:
 - decisions requiring a human owner.
 
 Do not expand design authorization into deployment or production release.
+Scale the gate to the requested maturity and actual risk. A missing project
+`EVAL.md` does not block a clearly labeled diagnostic review; it only prevents a
+governance-grade pass until an evaluation contract is established.
 
 ## Phase 1 — Understand and specify
 

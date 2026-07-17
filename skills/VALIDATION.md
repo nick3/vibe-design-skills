@@ -1,6 +1,15 @@
-# Validation plan
+# Validation standard
 
-The suite contains 12 draft Skills and 37 initial eval prompts. Behavioral evals have not yet been run. Validate before installation or team-wide distribution.
+The suite contains 12 release-candidate Skills and 37 initial eval prompts. Automated checks establish package and distribution integrity; behavioral evals establish usefulness and trigger quality; independent human review remains authoritative for subjective product/UI design quality.
+
+Run the complete automated gate from the repository root:
+
+```bash
+bun install --frozen-lockfile
+bun run check
+```
+
+Do not infer behavioral quality from a green static check.
 
 ## Validation goals
 
@@ -36,12 +45,25 @@ Do not use one fixture to judge generality.
 
 ### Stage 1 — Static suite checks
 
-- every Skill has valid frontmatter and a matching directory name;
-- every referenced local asset/reference exists;
-- every eval file and bundled JSON schema parses;
-- no Skill exceeds the progressive-disclosure size target without a justified reference split;
-- no fixture-specific product values, tokens, templates, thresholds, or credentials leak into reusable instructions;
-- descriptions distinguish adjacent Skills.
+The automated `bun run check` gate verifies:
+
+- every Skill has valid portable frontmatter and a matching directory name;
+- every Skill has valid Codex-facing `agents/openai.yaml` metadata;
+- every referenced local asset/reference/script and Markdown link exists;
+- every eval file and bundled JSON Schema parses;
+- no Skill exceeds the 500-line progressive-disclosure limit;
+- the deterministic score helper passes its regression tests;
+- `skills.sh.json` covers every Skill exactly once;
+- the pinned official `skills` CLI discovers the exact on-disk catalog;
+- a clean Codex project installation contains every file from all 12 Skill packages.
+
+Manual source review additionally checks:
+
+- all 12 packages pass the pinned official `skills-ref` validator in
+  `RELEASING.md`;
+- no fixture-specific product values, tokens, templates, thresholds, credentials, or unsafe instructions leak into reusable content;
+- descriptions distinguish adjacent Skills;
+- external claims and adapted concepts retain first-party provenance.
 
 ### Stage 2 — Per-Skill comparison
 
@@ -70,13 +92,40 @@ Check that each downstream output consumes upstream sources instead of recreatin
 
 ### Stage 4 — Trigger evaluation
 
-Create at least 20 realistic trigger queries for each Skill:
+[`tests/trigger-cases.json`](../tests/trigger-cases.json) contains 20 natural
+language queries for each Skill:
 
-- 8–10 tasks that should trigger;
-- 8–10 difficult adjacent tasks that should not trigger;
+- 8 tasks that should trigger;
+- 6 difficult adjacent tasks that should not trigger the target Skill;
+- 6 clear negative tasks;
 - include collisions such as foundation review versus artifact evaluation, patterns versus templates, DESIGN versus CRAFT, and bootstrap versus execute.
 
-Use held-out queries when tuning descriptions.
+The fixture test verifies exact catalog coverage, balance, uniqueness, bilingual
+coverage, and that queries do not force activation by naming `$skill-name`.
+
+For a behavioral run, give a fresh evaluator only:
+
+1. all Skill names and frontmatter descriptions;
+2. `ARCHITECTURE.md`;
+3. case IDs and queries, with expectations removed.
+
+Record exactly one predicted Skill or `none` for every case, then score the run:
+
+```bash
+node scripts/score-trigger-evals.mjs predictions.json
+```
+
+Require, across at least two fresh runs:
+
+- 100% positive recall for every target Skill;
+- 0% target-Skill false positives on its near-miss and negative cases;
+- at least 95% exact routing to the expected alternate Skill or `none`;
+- manual adjudication of every disagreement without exposing expectations to
+  the evaluator or silently changing a description.
+
+Exact alternate routing is diagnostic; the primary safety invariant is whether
+the target Skill activates when it should and stays quiet when it should not.
+Use new held-out queries whenever a description changes.
 
 ## Objective checks by capability
 
@@ -175,3 +224,19 @@ Ask reviewers:
 4. Rerun all affected fixtures against the same baseline.
 5. Retest trigger near-misses after description changes.
 6. Stop when reviewers are satisfied or changes no longer improve generality.
+
+## Current release-candidate evidence
+
+The non-normative
+[`reconstruction-b2b`](../tests/fixtures/reconstruction-b2b/README.md) scenario
+completed the first Stage 3 reconstruction comparison. Two fresh final
+reviewers preferred the with-Skill candidate:
+
+- product/design governance: 19/20 versus 15/20;
+- design-system/accessibility/implementation: 20/20 versus 15/20.
+
+The iteration record is in
+[`docs/releases/v0.1.0-rc.1-reconstruction-review.md`](../docs/releases/v0.1.0-rc.1-reconstruction-review.md).
+This satisfies the release candidate's representative reconstruction evidence;
+it does not satisfy the stable-release human-review or remaining rendered
+cross-layer scenario requirements.

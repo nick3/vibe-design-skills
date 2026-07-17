@@ -11,7 +11,8 @@
 ## Evaluation principles
 
 - Evidence before score.
-- Blockers cannot be averaged away.
+- Approved blockers cannot be averaged away.
+- Proposed blocker candidates have no gate effect until an owner approves them.
 - Review the rendered artifact, not the creator's private intent.
 - Return findings to the source rule that should change.
 
@@ -42,10 +43,12 @@
 | Subcheck | Evidence | Pass | Partial | Fail | Return destination |
 | --- | --- | --- | --- | --- | --- |
 
-## Blocking findings
+## Blocker policy
 
-| ID | Condition | Why it blocks | Applies in modes | Required return action |
-| --- | --- | --- | --- | --- |
+- Authority/approval source:
+
+| ID | Condition | Status: proposed/approved | Why it blocks if approved | Applies in modes | Required return action |
+| --- | --- | --- | --- | --- | --- |
 
 ## Decision and scoring policy
 
@@ -53,6 +56,7 @@
 - Thresholds:
 - Blocker override:
 - Missing-evidence policy:
+- Policy authority and approval date:
 - Human escalation:
 - Calculation owner/runtime:
 - Rounding and display:

@@ -1,0 +1,51 @@
+name: Skill proposal
+description: Propose a new Skill or a material change to an existing workflow.
+title: "[Proposal]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Reusable design problem
+      description: Describe the recurring team or Agent problem without prescribing a product-specific solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Trigger examples
+      description: Provide at least three realistic requests that should use this capability.
+    validations:
+      required: true
+
+  - type: textarea
+    id: near_misses
+    attributes:
+      label: Near-miss examples
+      description: Provide adjacent requests that should not trigger this capability.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Outputs and reusable resources
+      description: Identify expected artifacts, scripts, references, assets, and approval gates.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and sources
+      description: Link first-party specifications or anonymized recurring failures that support the proposal.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and permissions
+      description: Describe security, privacy, authorization, compatibility, and over-triggering risks.
+    validations:
+      required: true

@@ -116,6 +116,12 @@ Identify likely generic output patterns for the product, such as:
 - invented marketing copy, metrics, or imagery.
 
 Record the product-specific alternative. Do not ban a visual technique universally; ban unsupported use.
+When evidence does not establish product-specific harm, keep the item as a
+review question or example rather than promoting it to a normative rule.
+In reconstruct mode, do not invent prohibitions against pills, gradients, glow,
+illustration, large headings, cards, or motion merely because they are common
+generic-output risks. A normative prohibition needs product-specific evidence,
+an approved direction, or a recorded owner decision.
 
 ### 5. Validate on contrasting artifacts
 
@@ -139,6 +145,9 @@ For each rule identify:
 - where a finding should return.
 
 Keep actual scoring and release policy in `EVAL.md`.
+Do not assign high/medium/low risk or release-blocking status unless an approved
+evaluation policy defines it. A draft `EVAL.md` can propose a classification,
+but the authoring Agent must not apply that proposal as if it were approved.
 
 ## Human approval gate
 

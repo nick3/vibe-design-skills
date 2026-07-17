@@ -41,9 +41,12 @@
 | Role | May view | May change | Requires confirmation | Prohibited |
 | --- | --- | --- | --- | --- |
 
-## Risk and severity
+## Consequences and approved severity, if supplied
 
-| Level | Business meaning | User consequence | Required treatment | Evidence |
+- Severity-policy source:
+- If no approved taxonomy exists, describe consequences without assigning levels.
+
+| Approved/proposed level | Business meaning | User consequence | Required treatment | Evidence/status |
 | --- | --- | --- | --- | --- |
 
 ## Sensitive data
@@ -51,10 +54,10 @@
 | Data | Default exposure | Reveal condition | Audit requirement | Fallback |
 | --- | --- | --- | --- | --- |
 
-## High-risk and irreversible actions
+## Sensitive, irreversible, or explicitly classified actions
 
-| Action | Consequence | Required confirmation | Recovery/undo | Audit |
-| --- | --- | --- | --- | --- |
+| Action | Classification source | Consequence | Required confirmation | Recovery/undo | Audit |
+| --- | --- | --- | --- | --- | --- |
 
 ## Confidence and provenance
 

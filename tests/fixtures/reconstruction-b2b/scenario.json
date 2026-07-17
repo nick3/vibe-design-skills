@@ -1,0 +1,40 @@
+{
+  "id": "reconstruction-b2b-operations",
+  "purpose": "Non-normative fixture for testing reconstruction, provenance, conflict handling, migration, and independent foundation review.",
+  "request": "request.md",
+  "prompt": "We have a three-year-old B2B shipment-exception product with inconsistent Figma and production UI and no approved design foundation. Reconstruct a draft Vibe Design foundation from the supplied evidence. Preserve approved product and domain truth, distinguish canonical rules from legacy accidents, expose conflicts, propose migration rather than silently normalizing production, and do not invent brand authority. The product and design owners authorize reconstruct mode and draft creation, but they have not approved any new visual values or evaluation thresholds.",
+  "mode": "reconstruct",
+  "inputs": [
+    "brief.md",
+    "domain-glossary.md",
+    "component-inventory.md",
+    "ui-observations.md",
+    "support-findings.md",
+    "legacy-tokens.css"
+  ],
+  "acceptance_criteria": [
+    "Select reconstruct mode and record source authority, freshness, scope, and reliability.",
+    "Keep approved domain terms and permissions distinct from observed legacy labels.",
+    "Do not choose a canonical blue, spacing scale, density, font, or evaluation threshold without an approval record.",
+    "Identify conflicting token and component evidence instead of resolving it by frequency.",
+    "Separate PRODUCT, DOMAIN, DESIGN, CRAFT, COMPONENTS, PATTERNS, TEMPLATES, EVAL, decisions, gaps, and migration concerns.",
+    "Do not create an agentic-interface contract because the fixture contains no agentic capability.",
+    "Define a staged migration and representative-preview requirement before claiming validation.",
+    "Treat observed viewports as evidence cases, not approved support or promotion gates.",
+    "Do not let the authoring Agent create REVIEW.md or claim independent review in the same reasoning pass.",
+    "Distinguish advisory readiness limitations from formally approved blockers and severity levels.",
+    "Provide a concise entry point and reference authoritative rules instead of repeating them across documents.",
+    "Keep workflow-method provenance outside the target product evidence ledger and decisions.",
+    "Preserve unknown permission cells as unknown rather than inventing product denial policy.",
+    "Require migration pilots to define rollback mechanism, trigger approval, owner, observation, and restore verification.",
+    "End with explicit owners, approval gates, unresolved gaps, and validation actually performed."
+  ],
+  "prohibited_leakage": [
+    "#2563eb",
+    "#1d4ed8",
+    "44px",
+    "48px",
+    "RelayOps",
+    "Shipment Exception"
+  ]
+}

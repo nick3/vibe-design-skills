@@ -23,6 +23,9 @@ Prefer approved versions of:
 - representative good, bad, mixed and boundary examples.
 
 If the foundation documents are drafts, label dependent evaluation rules as provisional.
+Keep observed examples separate from policy: an encountered viewport, device,
+defect count, support frequency, or artifact can motivate a test case, but
+cannot become a required gate or severity threshold without owner approval.
 
 ## Outputs
 
@@ -90,6 +93,9 @@ Blockers capture failures that must not be hidden by a good average score, such 
 - severe responsive or rendering failure.
 
 Blockers are governance decisions. Require an authorized owner to approve them.
+Until approval, label them `proposed blocker candidates`. The Agent drafting
+`EVAL.md` must not apply its own proposed blockers to the same foundation as
+though a release policy already existed.
 
 ### 5. Define review modes
 
@@ -136,6 +142,9 @@ Require explicit approval for:
 - evidence minimums;
 - exceptions and escalation paths.
 - scoring calculation, rounding, versioning, and round-comparison policy when numerical gates are used.
+
+Record who granted that authority and what scope it covers. Do not infer an
+organizational role from the fact that someone requested a draft.
 
 ## Boundaries
 

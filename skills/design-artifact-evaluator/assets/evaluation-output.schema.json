@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schemas/design-artifact-evaluation.schema.json",
+  "$id": "https://raw.githubusercontent.com/nick3/vibe-design-skills/main/skills/design-artifact-evaluator/assets/evaluation-output.schema.json",
   "title": "Design artifact evaluation",
   "type": "object",
   "additionalProperties": false,
@@ -100,11 +100,13 @@
     },
     "overall_score": {
       "type": "number",
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 10
     },
     "threshold": {
       "type": "number",
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 10
     },
     "blockers": {
       "type": "array",

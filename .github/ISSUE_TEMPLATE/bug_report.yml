@@ -1,0 +1,64 @@
+name: Skill bug
+description: Report incorrect routing, missing resources, unsafe behavior, or an installation problem.
+title: "[Bug]: "
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Affected Skill
+      description: Provide the Skill name, or write "repository" for installation and catalog issues.
+      placeholder: vibe-design-execute
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Provide the commit SHA, tag, or installed source from skills-lock.json.
+      placeholder: main at 0123456
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Agent and environment
+      description: Include the Agent, platform, and relevant design/browser tooling.
+      placeholder: Codex on macOS with Figma access
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: Reproduction request
+      description: Provide the smallest user request and inputs that reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Explain what happened and include sanitized logs or output excerpts.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Explain the routing, output, or safety behavior you expected.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed credentials, confidential artifacts, and customer data.
+          required: true
+        - label: This is not a security vulnerability that should use private reporting.
+          required: true

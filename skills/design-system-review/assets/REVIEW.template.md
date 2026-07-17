@@ -5,6 +5,11 @@
 - Mode:
 - Scope:
 - Reviewer:
+- Reviewer separation/context:
+- Candidate version or frozen snapshot:
+- Conflict disclosure:
+- Appointment/authority source:
+- Authority mode: governed_gate | advisory_review
 - Date:
 - Documents reviewed:
 - Evidence reviewed:
@@ -12,22 +17,31 @@
 
 ## Verdict
 
-`PASS | PASS_WITH_FOLLOW_UP | REVISE | BLOCKED`
+- Governed gate: `PASS | PASS_WITH_FOLLOW_UP | REVISE | BLOCKED`
+- Advisory review: `READY_RECOMMENDATION | REVISE_RECOMMENDATION | INSUFFICIENT_EVIDENCE`
 
 ### Rationale
 
 [Short evidence-based explanation]
 
-## Blocking findings
+## Gate blockers
+
+[Governed mode only. Every blocker must cite its approved policy source.]
 
 ### [Finding title]
 
 - Severity: blocker
+- Policy source:
 - Evidence:
 - Impact:
 - Source document to revisit:
 - Required action:
 - Owner/decision needed:
+
+## Advisory readiness limitations
+
+| Limitation | Evidence | Impact | Return destination | Decision/action needed |
+| --- | --- | --- | --- | --- |
 
 ## Major and minor findings
 
@@ -63,6 +77,7 @@
 
 - Representative artifacts reviewed:
 - Viewports/states covered:
+- Authority for required support scope:
 - Result:
 - Unvalidated scope:
 

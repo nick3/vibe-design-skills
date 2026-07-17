@@ -12,6 +12,39 @@ Read:
 - `references/review-rubric.md`
 - `assets/REVIEW.template.md`
 
+## Independence precondition
+
+A review is independent only when all of the following are true:
+
+- the candidate files are frozen and identified by version, commit, checksum,
+  or dated snapshot;
+- the reviewer did not author or revise that candidate in the same reasoning
+  context;
+- the reviewer receives the visible artifacts and evidence, not private
+  generator reasoning;
+- reviewer identity or context, conflicts, scope, appointment, and decision
+  authority are disclosed.
+
+If these conditions are not met, do not call the result independent and do not
+write `REVIEW.md`. The author may produce a clearly labeled `SELF-CHECK.md`,
+without an independent verdict, and must leave the independent gate pending.
+Adopting an “independent posture” in prose does not create independence.
+
+## Verdict authority
+
+State one authority mode before reviewing:
+
+- `governed_gate`: an approved `EVAL.md`, review charter, or explicit owner
+  decision defines the reviewer, verdicts, severities, and consequences;
+- `advisory_review`: reviewer separation exists, but the organization has not
+  approved a formal gate policy.
+
+In `governed_gate` mode, use the approved verdict and severity policy. In
+`advisory_review` mode, use `READY_RECOMMENDATION`,
+`REVISE_RECOMMENDATION`, or `INSUFFICIENT_EVIDENCE`; call unresolved issues
+`readiness limitations`, not product release blockers. Never manufacture gate
+authority from the completeness of the document set.
+
 ## Review modes
 
 - `foundation-draft`: first complete documentation set before adoption.
@@ -46,11 +79,17 @@ Missing inputs are findings, not permission to assume they exist.
 
 Check:
 
+- reviewer separation, candidate identity, authority mode and conflicts;
 - document status, owner, scope and freshness;
 - traceability to evidence or explicit decisions;
 - whether inferred rules are labeled;
 - whether unresolved gaps are visible;
 - whether approvals match the claimed status.
+
+Keep method provenance separate from product provenance. Google format
+compatibility, this Skill's rubric, and validation tooling may govern how this
+review is performed, but they do not authorize product, brand, viewport,
+accessibility, risk, or release decisions.
 
 ### 2. Check Google DESIGN.md compatibility
 
@@ -67,6 +106,9 @@ npx @google/design.md diff DESIGN-old.md DESIGN.md
 ```
 
 Do not install dependencies or access the network without required authorization. If the tool cannot run, record `official_cli_not_run` and perform the structural checks described in the rubric.
+
+Treat CLI output as format evidence only. It cannot prove product correctness,
+visual quality, approval, accessibility conformance, or readiness.
 
 ### 3. Review each document on its own terms
 
@@ -112,23 +154,39 @@ When previews or real screens are available, check that:
 
 If no representative artifact is available, the design system can be structurally reviewed but not visually validated.
 
+Observed viewports, devices, and states describe evidence coverage. Do not turn
+them into required support scope or promotion gates unless an authoritative
+source approved that scope.
+
 ### 6. Decide and return
 
-Use one verdict:
+In `governed_gate` mode, use the approved verdict vocabulary. If the approved
+policy adopts this Skill's default vocabulary, use:
 
 - `PASS`: ready for the stated scope, with no blockers.
 - `PASS_WITH_FOLLOW_UP`: usable for a limited scope; non-blocking work is owned and explicit.
 - `REVISE`: important gaps or contradictions prevent reliable team use.
 - `BLOCKED`: evidence or authority is insufficient to complete review.
 
+In `advisory_review` mode, use the recommendation vocabulary defined above.
+Do not translate an advisory recommendation into an organizational approval or
+release decision.
+
 Prioritize a small return plan. Do not produce an unranked wish list.
 
 ## Finding severity
 
-- `blocker`: unsafe, contradictory, untraceable or unusable for the claimed scope.
-- `major`: likely to cause inconsistent Agent outputs or material migration errors.
-- `minor`: localized clarity or completeness issue.
+Apply an approved severity scheme when one exists. Under the default governed
+scheme:
+
+- `blocker`: an approved policy condition that prevents the claimed use;
+- `major`: likely to cause inconsistent Agent outputs or material migration errors;
+- `minor`: localized clarity or completeness issue;
 - `note`: observation or future improvement without current impact.
+
+In advisory mode, report the evidence and impact without inventing high/medium/
+low risk, blocker, or release severity. A strong rationale can justify a
+recommendation; it cannot create governance authority.
 
 ## Mutation policy
 
@@ -142,3 +200,7 @@ Default to report-only review. Do not modify approved standards unless the user 
 - Do not treat a polished preview as proof of reusable system coverage.
 - Do not punish an explicit, owned gap more severely than a hidden assumption.
 - Do not expose or rely on private generator reasoning.
+- Do not review a candidate that you authored and label the result independent.
+- Do not convert observed coverage or support counts into policy thresholds.
+- Do not attribute a user request to a product/design owner unless that role is
+  explicitly established.
