@@ -43,6 +43,7 @@ Tool choice follows the requested deliverable and uncertainty. A browser prototy
 
 An independent evaluator:
 
+- reviews a frozen candidate in a reasoning context separate from its author;
 - freezes the artifact version;
 - collects layout, structure, interaction, screenshot/device, runtime, and provenance evidence;
 - applies approved subchecks, weights, blockers, and missing-evidence policy;
@@ -82,6 +83,17 @@ When sources conflict, use the target project's documented authority order. A co
 5. isolated legacy artifacts or Agent inference.
 
 Expose conflicts rather than resolving them by frequency.
+A request authorizes only the requested scope. Do not infer the requester's
+organizational role or approval authority unless it is explicitly supplied.
+
+Method constraints such as Skill instructions, document formats, and validation
+tools remain separate from target-product evidence. Observed artifacts,
+viewports, and support counts remain evidence until an authorized decision turns
+them into standards or gates.
+
+An incomplete permission model remains incomplete. Unknown action/role cells
+must return to the policy owner; they are neither permission to act nor evidence
+of an approved deny-by-default product rule.
 
 ## Routing precedence
 
@@ -106,3 +118,7 @@ artifact finding
 ```
 
 This is governed learning, not unsupervised self-modification.
+
+An author self-check is useful but is not independent evaluation. If a separate
+reviewer is unavailable, leave the gate pending rather than self-certifying the
+work.

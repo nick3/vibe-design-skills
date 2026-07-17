@@ -40,6 +40,12 @@ Use whatever authoritative sources are available:
 
 If product context is missing, pause visual finalization and request `product-design-context`. A visual system without product intent is only a style sample.
 
+Keep product evidence separate from method provenance. Google `DESIGN.md`
+compatibility is a suite output constraint, not evidence for the target
+product's brand, values, scope, or approval. A request to draft the foundation
+does not prove that the requester is a design owner or can approve exact visual
+values unless that authority is explicitly supplied.
+
 ## Outputs
 
 Default outputs:
@@ -66,6 +72,27 @@ For every material visual rule, distinguish:
 - `confidence`: high, medium or low.
 
 Repeated use is evidence, not automatic approval. An isolated value may be a deliberate exception; a dominant value may be a widespread legacy mistake.
+
+Do not assign organizational risk levels, release severity, or approval status
+unless an authoritative policy or decision supplies that classification.
+Describe the evidence, consequence, uncertainty, and decision needed instead.
+
+In extract mode, when exact values conflict and no authorized design owner or
+comparative rendered evidence supports a selection:
+
+- do not bind one observed value as the preferred candidate because it is newer,
+  more frequent, or already named “primary”;
+- do not invent missing font sizes, line heights, weights, spacing, radii, or
+  fallback claims merely to complete normative YAML;
+- either present observed alternatives with equal status in the audit/preview
+  or leave the normative field unresolved;
+- mark official lint and value-level validation pending if an incomplete draft
+  cannot yet satisfy the format.
+
+An exact candidate may be proposed only when its rationale and comparison
+evidence are visible. A prominent concrete token block can become a de facto
+standard even when labeled draft, so prefer unresolved roles over unsupported
+anchoring.
 
 ## Shared workflow
 
@@ -111,7 +138,8 @@ For areas not fully represented by the Google schema, keep detailed guidance in 
 
 ### 4. Test on representative artifacts
 
-Apply the proposed system to at least two meaningfully different representative artifacts when possible, such as:
+Apply the proposed system to contrasting representative artifacts when
+possible, such as:
 
 - a primary workflow or dashboard;
 - a form, settings or high-density state;
@@ -121,6 +149,13 @@ Apply the proposed system to at least two meaningfully different representative 
 The artifacts are validation fixtures, not content to copy into the reusable skill.
 
 If no rendering surface is available, provide a preview specification and clearly mark visual validation as pending.
+
+An observed viewport or device is a useful reproduction case, not proof of the
+supported range and not a mandatory promotion gate. Record support and release
+coverage only from an authoritative requirement or explicit owner decision.
+Suggested artifact or alternative counts are working tactics for the current
+exploration, not organizational promotion minimums. If an exact minimum matters,
+an owner must approve it in the evaluation or review policy.
 
 ### 5. Human decision gate
 

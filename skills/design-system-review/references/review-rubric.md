@@ -2,10 +2,14 @@
 
 ## 1. Scope and provenance
 
+- Candidate version and reviewer separation are explicit.
+- Review authority is distinguished from advisory recommendation.
 - Every document declares status, owner, scope and review date.
 - Material rules have evidence, rationale or explicit approval.
 - Inferences and unresolved gaps are labeled.
 - Existing designs were treated as evidence rather than automatically canonized.
+- External formats and review methods are not presented as target-product
+  evidence or owner approval.
 
 ## 2. Product and domain readiness
 
@@ -54,7 +58,8 @@
 
 - Evidence requirements are explicit.
 - Dimensions trace to foundation documents.
-- Blockers protect critical failures from average scores.
+- Approved blockers protect critical failures from average scores; proposed
+  blockers remain visibly provisional.
 - Review modes distinguish maturity without changing evidence meaning.
 - Failed reviews return concrete work.
 - Calibration status and limitations are honest.
@@ -78,8 +83,13 @@
 - Update mode includes diff and downstream impact.
 - Legacy values have classification and migration treatment.
 - Unvalidated platforms/themes are named as limitations.
+- Observed viewports and states are not promoted into support or release gates
+  without an authoritative scope decision.
 
-## Typical blockers
+## Typical governed gate blockers
+
+Use these only when an approved review contract makes them blockers. Otherwise
+report them as advisory readiness limitations.
 
 - final standards based on insufficient or unapproved evidence;
 - unresolved token references or invalid document structure;
@@ -92,3 +102,6 @@
 - material craft rules remain vague or untestable;
 - a canonical template contradicts the primary task or responsive order;
 - Agentic UI permits arbitrary rendering/actions or lacks authorization and fallback boundaries;
+
+Reviewer separation failure is not solved by self-scoring. Leave the independent
+gate pending and commission a separate reviewer.

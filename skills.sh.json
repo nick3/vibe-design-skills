@@ -1,0 +1,42 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Entry points",
+      "description": "Start a governed Vibe Design foundation or execute a concrete design request end to end.",
+      "skills": [
+        "vibe-design-bootstrap",
+        "vibe-design-execute"
+      ]
+    },
+    {
+      "title": "Foundation",
+      "description": "Establish durable product, domain, visual, craft, component, agentic-interface, and evaluation truth.",
+      "skills": [
+        "product-design-context",
+        "design-system-foundation",
+        "design-craft-foundation",
+        "component-pattern-foundation",
+        "agentic-interface-foundation",
+        "design-evaluation-foundation"
+      ]
+    },
+    {
+      "title": "Feature design",
+      "description": "Specify feature behavior and explore reusable templates or structural alternatives before detailed UI work.",
+      "skills": [
+        "feature-design-spec",
+        "design-template-and-variants"
+      ]
+    },
+    {
+      "title": "Review and evaluation",
+      "description": "Independently review foundation documents or evaluate rendered artifact evidence.",
+      "skills": [
+        "design-system-review",
+        "design-artifact-evaluator"
+      ]
+    }
+  ]
+}

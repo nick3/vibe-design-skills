@@ -42,6 +42,9 @@ Depending on mode:
 - updates to project `GAPS.md` when a needed template, component, or pattern is missing.
 
 Do not promote a new template into the reusable library merely because it appeared in one successful feature.
+Use contrasting evidence to establish reuse, but do not invent a required
+number of screens, tasks, or states unless the project review policy approves
+that minimum.
 
 ## Template contract
 
@@ -108,6 +111,10 @@ For every variant specify:
 - advantages, risks, and evidence assumptions.
 
 Changing palette, illustration, corner radius, or card styling does not create an IA variant.
+
+The variant count is an exploration tactic for the Agent, not a target-product
+policy or template-promotion threshold. Do not copy it into foundation
+governance unless an owner explicitly adopts it.
 
 ### 4. Make differences visible
 

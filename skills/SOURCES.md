@@ -34,9 +34,27 @@ Adapted principles:
 
 The upstream format is marked alpha. `design-system-foundation` requires checking the current specification when network access and authorization permit.
 
+## Agent Skills format and distribution
+
+Specification: https://agentskills.io/specification
+
+CLI: https://github.com/vercel-labs/skills
+
+Adapted principles:
+
+- portable `SKILL.md` metadata and self-contained Skill directories;
+- progressive disclosure through `SKILL.md`, `references/`, `assets/`, and deterministic `scripts/`;
+- valid parent-directory/name matching and relative resource references;
+- GitHub repository discovery through `npx skills add owner/repo`;
+- realistic eval cases, with-Skill/baseline comparison, trigger boundary testing, and human review for subjective quality.
+
+The CLI is a distribution dependency, not copied implementation code. Codex-specific `agents/openai.yaml` files are optional interface metadata and do not replace the portable Skill instructions.
+
 ## Local research
 
 - `../docs/research/vibe-designing-playbook-notes.md`
 - `../docs/research/playbook-skills-gap-analysis.md`
+- `../docs/research/skills-cli-installability.md`
+- `../docs/research/popular-skills-release-practices.md`
 
 These notes explain the interpretation and the gap analysis that led to the twelve-Skill architecture.

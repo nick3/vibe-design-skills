@@ -1,0 +1,60 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  skills:
+    name: Skills suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.7
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          version: "0.11.16"
+
+      - name: Install validation dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Audit validation dependencies
+        run: bun audit
+
+      - name: Validate suite
+        run: bun run check
+
+      - name: Validate Agent Skills specification
+        shell: bash
+        run: |
+          set -euo pipefail
+          for skill in skills/*; do
+            test -f "$skill/SKILL.md" || continue
+            uvx --from 'git+https://github.com/agentskills/agentskills@38a2ff82958afee88dadf4831509e6f7e9d8ef4e#subdirectory=skills-ref' \
+              skills-ref validate "$skill"
+          done
+
+      - name: Verify the published commit through the Skills CLI
+        if: github.event_name != 'pull_request'
+        env:
+          SKILLS_SOURCE: ${{ github.server_url }}/${{ github.repository }}
+        run: bun run check:remote -- "$SKILLS_SOURCE"

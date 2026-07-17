@@ -1,0 +1,1986 @@
+{
+  "schema_version": 1,
+  "purpose": "Held-out natural-language trigger, near-miss, and negative routing fixtures for all installable Vibe Design Skills.",
+  "skills": [
+    {
+      "skill_name": "agentic-interface-foundation",
+      "cases": [
+        {
+          "id": "aif-01",
+          "query": "Define the product experience contract for our support copilot, including progress, uncertainty, handoff, and approval states.",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Requests the durable experience contract for a copilot and its agent-specific states."
+        },
+        {
+          "id": "aif-02",
+          "query": "请为我们的采购 Agent 制定人机协作规范：什么时候询问、什么时候自动执行、什么时候必须人工授权。",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Defines human-in-the-loop and authorization rules for an autonomous agent."
+        },
+        {
+          "id": "aif-03",
+          "query": "We need an A2UI message model for tool calls, partial results, generated cards, errors, and final reports.",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Explicitly requests a structured Agent-to-UI rendering contract."
+        },
+        {
+          "id": "aif-04",
+          "query": "设计一套 GenUI 基础规则，让界面能按上下文生成表单和结果区，同时清楚标注来源与置信度。",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Asks for reusable generative UI rules with provenance and uncertainty."
+        },
+        {
+          "id": "aif-05",
+          "query": "Create the foundation for how our research assistant streams work, exposes its plan, asks clarifying questions, and lets users interrupt.",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Targets persistent interaction rules for agent progress and user control."
+        },
+        {
+          "id": "aif-06",
+          "query": "我们正在补 AGENTIC-INTERFACE.md，请定义聊天、后台任务、失败恢复和人工接管的统一体验。",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Directly authors the agentic interface declaration and its core experience states."
+        },
+        {
+          "id": "aif-07",
+          "query": "Set product-wide AX principles for an assistant that can draft, recommend, and execute actions with different risk levels.",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Requests product-level agent experience principles across action risk levels."
+        },
+        {
+          "id": "aif-08",
+          "query": "How should generated reports, suggested actions, and autonomous actions be represented consistently across our app? Write the reusable contract.",
+          "expect": "trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "positive",
+          "reason": "Seeks a reusable cross-product contract for generated and autonomous output."
+        },
+        {
+          "id": "aif-09",
+          "query": "Build the working chat interface for our travel agent from the approved spec.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is a concrete production request, which has routing precedence over foundation authoring."
+        },
+        {
+          "id": "aif-10",
+          "query": "请验收线上客服 Copilot 的真实对话流程，检查中断、重试和授权交互是否可用。",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "The user asks to judge a real rendered flow using interaction evidence."
+        },
+        {
+          "id": "aif-11",
+          "query": "Audit our completed AGENTIC-INTERFACE.md against PRODUCT.md and PATTERNS.md and tell us if the foundation is ready.",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "The document already exists and the task is independent foundation readiness review."
+        },
+        {
+          "id": "aif-12",
+          "query": "Make our static billing settings page feel AI-native by randomly rearranging the fields for each user.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "The concrete redesign request routes to execution, which should reject unsupported generative behavior rather than author an agentic foundation."
+        },
+        {
+          "id": "aif-13",
+          "query": "Start a new AI assistant product and create the full foundation set: PRODUCT, DOMAIN, DESIGN, components, patterns, agent behavior, and evaluation.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "This is broad foundation creation rather than one agentic declaration."
+        },
+        {
+          "id": "aif-14",
+          "query": "为智能助手制定评审量表，明确证据要求、阻塞项、评分和上线门槛。",
+          "expect": "not_trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "near_miss",
+          "reason": "The requested output is an evaluation contract, even though its subject is an assistant."
+        },
+        {
+          "id": "aif-15",
+          "query": "Write three headline options for our summer campaign landing page.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Marketing copywriting has no agentic interface contract."
+        },
+        {
+          "id": "aif-16",
+          "query": "把这段产品说明翻译成中文，保持语气自然。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Translation is unrelated to agentic product experience."
+        },
+        {
+          "id": "aif-17",
+          "query": "Normalize these customer records and return a CSV.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Data cleanup does not define an AI-facing interface foundation."
+        },
+        {
+          "id": "aif-18",
+          "query": "请给普通账户设置页重新排序导航项，不要加入任何 AI 功能。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "negative",
+          "reason": "This is a concrete non-agentic design change, so execution applies while the agentic foundation must stay quiet."
+        },
+        {
+          "id": "aif-19",
+          "query": "Summarize this quarter's sales notes in five bullets.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Using AI for summarization does not itself require an agentic UI contract."
+        },
+        {
+          "id": "aif-20",
+          "query": "帮我写一个 SQL 查询，按地区统计退款金额。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A database query is unrelated to product-level agent experience."
+        }
+      ]
+    },
+    {
+      "skill_name": "component-pattern-foundation",
+      "cases": [
+        {
+          "id": "cpf-01",
+          "query": "Create COMPONENTS.md and PATTERNS.md for our admin product, including semantic roles, allowed usage, and required states.",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Directly requests both reusable component and pattern declarations."
+        },
+        {
+          "id": "cpf-02",
+          "query": "请从现有 Figma 和前端代码中整理组件清单，合并重复项，并明确每个组件的使用规则。",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Normalizes a reusable component inventory from existing sources."
+        },
+        {
+          "id": "cpf-03",
+          "query": "Define the semantic difference between banner, toast, inline alert, and modal, including when each is appropriate.",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Establishes reusable component semantics and usage rules."
+        },
+        {
+          "id": "cpf-04",
+          "query": "为所有表单控件规定默认、悬停、聚焦、禁用、加载、错误和成功状态的要求。",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Defines required reusable component states."
+        },
+        {
+          "id": "cpf-05",
+          "query": "Reconstruct the recurring search-results pattern in our product and document its filters, pagination, empty state, and recovery behavior.",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Reconstructs a reusable product interaction/page pattern."
+        },
+        {
+          "id": "cpf-06",
+          "query": "我们的产品里有三种“选择器”，请统一它们的语义、命名、交互约束和可访问性状态。",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Normalizes component semantics, behavior, and state requirements."
+        },
+        {
+          "id": "cpf-07",
+          "query": "Document reusable patterns for multi-step approvals, including role handoffs, pending states, rejection, retry, and audit history.",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Creates reusable interaction-pattern semantics and state coverage."
+        },
+        {
+          "id": "cpf-08",
+          "query": "在产品和视觉角色已经稳定的前提下，补齐卡片、列表、详情页和批量操作的跨页面模式规范。",
+          "expect": "trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "positive",
+          "reason": "Explicitly requests reusable page and interaction patterns after prerequisites are stable."
+        },
+        {
+          "id": "cpf-09",
+          "query": "Turn our approved page pattern into three callable templates with compact, spacious, and mobile variants.",
+          "expect": "not_trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "near_miss",
+          "reason": "Building callable templates and variants is explicitly outside this Skill."
+        },
+        {
+          "id": "cpf-10",
+          "query": "请只调整按钮、输入框和卡片的颜色、圆角、阴影与字体，让它们符合新的品牌视觉。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is a concrete visual restyling request, not reusable component semantics or visual-system authoring."
+        },
+        {
+          "id": "cpf-11",
+          "query": "Build and ship a single responsive customer-detail page using the component rules we already have.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "Implementing one concrete page takes execution precedence."
+        },
+        {
+          "id": "cpf-12",
+          "query": "从零建立完整设计基础，包括产品语义、视觉系统、工艺标准、组件模式和评估规则。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "A complete foundation-creation request routes to bootstrap."
+        },
+        {
+          "id": "cpf-13",
+          "query": "Before defining UI patterns, clarify what a claim, claimant, adjuster, and settlement mean and which roles can change them.",
+          "expect": "not_trigger",
+          "expected_skill": "product-design-context",
+          "kind": "near_miss",
+          "reason": "The prerequisite product and domain semantics are not yet stable."
+        },
+        {
+          "id": "cpf-14",
+          "query": "组件结构已经统一，但整体仍显得粗糙；请制定跨产品的层级、密度、动效和内容质量标准。",
+          "expect": "not_trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "near_miss",
+          "reason": "The request is for reusable craft quality guidance beyond component semantics."
+        },
+        {
+          "id": "cpf-15",
+          "query": "Convert 72 degrees Fahrenheit to Celsius.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Unit conversion is unrelated to component or interaction patterns."
+        },
+        {
+          "id": "cpf-16",
+          "query": "写一首关于夏夜的四行短诗。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Creative writing does not define reusable product UI patterns."
+        },
+        {
+          "id": "cpf-17",
+          "query": "Check whether this API endpoint is vulnerable to SQL injection.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Security review is outside the component-pattern foundation scope."
+        },
+        {
+          "id": "cpf-18",
+          "query": "帮我把这份采购清单按供应商排序。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "List sorting is unrelated to interface pattern authoring."
+        },
+        {
+          "id": "cpf-19",
+          "query": "Explain how DNS resolution works.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A networking explanation has no design component-pattern intent."
+        },
+        {
+          "id": "cpf-20",
+          "query": "润色我的个人简历，让工作经历更简洁。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Resume editing does not create reusable UI semantics or patterns."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-artifact-evaluator",
+      "cases": [
+        {
+          "id": "dae-01",
+          "query": "Evaluate the live checkout flow in the browser, capture evidence, and give me a deterministic release verdict.",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Requests evidence-based evaluation and release judgment of a real flow."
+        },
+        {
+          "id": "dae-02",
+          "query": "请 QA 这个已部署的移动端页面，检查真实结构、交互、响应式和运行时错误，并给出优先修复清单。",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Asks to inspect a deployed artifact across structure, interaction, device, and runtime evidence."
+        },
+        {
+          "id": "dae-03",
+          "query": "Score our working prototype against the project's EVAL.md subchecks and blockers.",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Applies the approved evaluation contract to a rendered prototype."
+        },
+        {
+          "id": "dae-04",
+          "query": "比较首页原型的第 3 轮和第 4 轮，确认关键问题是否修复、有没有新回归。",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Requests iteration-round comparison and regression detection for an artifact."
+        },
+        {
+          "id": "dae-05",
+          "query": "Release-gate this website using desktop and mobile screenshots plus interaction evidence; do not change the implementation.",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Explicitly asks for independent artifact judgment with multiple evidence types."
+        },
+        {
+          "id": "dae-06",
+          "query": "验收这个真实的 Agent 操作台：任务进度、授权弹窗、失败恢复和生成报告都要实际走一遍。",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "The agentic subject is a real interface requiring interaction-based evaluation."
+        },
+        {
+          "id": "dae-07",
+          "query": "Inspect the implemented settings flow for accessibility, broken states, visual regressions, and missing evidence, then return pass or fail.",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Requests a deterministic verdict on an implemented flow with evidence gaps considered."
+        },
+        {
+          "id": "dae-08",
+          "query": "Can you independently review this generated dashboard, prioritize the findings, and tell us whether another iteration is justified?",
+          "expect": "trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "positive",
+          "reason": "Judges a generated rendered artifact and asks for a prioritized iteration decision."
+        },
+        {
+          "id": "dae-09",
+          "query": "Create the EVAL.md rubric that we will later use to score our prototypes.",
+          "expect": "not_trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "near_miss",
+          "reason": "Authors the evaluation standard rather than applying it to an artifact."
+        },
+        {
+          "id": "dae-10",
+          "query": "请评审 DESIGN.md、COMPONENTS.md 和 PATTERNS.md 是否已经可以供团队使用。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "The review target is the foundation document set, not a rendered product."
+        },
+        {
+          "id": "dae-11",
+          "query": "Implement the landing page from this approved design and fix anything you notice along the way.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is artifact production and modification, not independent judging."
+        },
+        {
+          "id": "dae-12",
+          "query": "Review the agent experience rules in AGENTIC-INTERFACE.md before anyone builds the interface.",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "Only a foundation declaration exists; there is no rendered artifact to evaluate."
+        },
+        {
+          "id": "dae-13",
+          "query": "Run the backend unit test suite and report failing tests.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "near_miss",
+          "reason": "General software test execution is not product or UI artifact evaluation."
+        },
+        {
+          "id": "dae-14",
+          "query": "Plan a usability study for a concept that has not been designed or prototyped yet.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "near_miss",
+          "reason": "There is no real screen, flow, prototype, or interface artifact to inspect."
+        },
+        {
+          "id": "dae-15",
+          "query": "Write release notes for version 2.4.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Release-note writing is unrelated to UI artifact evaluation."
+        },
+        {
+          "id": "dae-16",
+          "query": "帮我把 JSON 数据转换成 CSV。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Data conversion does not require browser or device evidence."
+        },
+        {
+          "id": "dae-17",
+          "query": "Explain the difference between OAuth and SAML.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A technical explanation is not evaluation of a rendered artifact."
+        },
+        {
+          "id": "dae-18",
+          "query": "请帮我写一句新的品牌口号。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Brand copywriting has no artifact QA or release-gate request."
+        },
+        {
+          "id": "dae-19",
+          "query": "Find duplicate rows in this spreadsheet.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Spreadsheet cleanup is unrelated to product design evaluation."
+        },
+        {
+          "id": "dae-20",
+          "query": "列出三种适合办公室的低维护植物。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A lifestyle recommendation has no UI artifact under review."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-craft-foundation",
+      "cases": [
+        {
+          "id": "dcf-01",
+          "query": "Create CRAFT.md for our analytics product so designers and agents share explicit standards for hierarchy, density, motion, feedback, and accessibility.",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Directly requests the reusable craft declaration owned by this Skill."
+        },
+        {
+          "id": "dcf-02",
+          "query": "团队总说页面“太像 AI 生成的”，请把这种主观反馈变成可执行、可复用的设计质量规则。",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Turns generic-AI critique into durable executable craft guidance."
+        },
+        {
+          "id": "dcf-03",
+          "query": "Define how our product should use composition, whitespace, type emphasis, and progressive disclosure across all future screens.",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Establishes cross-product craft rules beyond tokens or components."
+        },
+        {
+          "id": "dcf-04",
+          "query": "把“信息层级不清楚、页面不够精致、反馈太弱”整理成 CRAFT.md，并给出正反例原则。",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Codifies subjective quality critique into an explicit craft standard."
+        },
+        {
+          "id": "dcf-05",
+          "query": "Our tokens are already stable; now establish reusable standards for compact enterprise layouts without sacrificing readability or accessibility.",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Requests density, readability, and accessibility guidance beyond tokens."
+        },
+        {
+          "id": "dcf-06",
+          "query": "为整个产品制定动效与反馈的质量标准：什么时候动、为什么动、持续多久，以及如何照顾减少动态效果的用户。",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Creates reusable motion, feedback, and accessibility craft rules."
+        },
+        {
+          "id": "dcf-07",
+          "query": "Reconstruct the unwritten visual craft principles evident across our best approved screens and make them explicit for future work.",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Reconstructs durable craft standards from approved artifacts."
+        },
+        {
+          "id": "dcf-08",
+          "query": "我们需要一套适用于所有功能的内容呈现准则，包括标题力度、辅助文案、空状态语气和信息节奏。",
+          "expect": "trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "positive",
+          "reason": "Defines reusable content and hierarchy craft guidance."
+        },
+        {
+          "id": "dcf-09",
+          "query": "Choose our brand palette, typefaces, radius scale, and semantic color tokens, then record them in DESIGN.md.",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "near_miss",
+          "reason": "Choosing brand tokens belongs to the visual design-system declaration."
+        },
+        {
+          "id": "dcf-10",
+          "query": "梳理保险理赔产品里的用户角色、业务实体和审批规则，先不要讨论界面风格。",
+          "expect": "not_trigger",
+          "expected_skill": "product-design-context",
+          "kind": "near_miss",
+          "reason": "This is business meaning and domain grounding, explicitly outside craft."
+        },
+        {
+          "id": "dcf-11",
+          "query": "This one dashboard feels cluttered and lacks hierarchy. Inspect the rendered page, gather evidence, and return a verdict with the top fixes.",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "Critiquing one rendered artifact routes to independent artifact evaluation."
+        },
+        {
+          "id": "dcf-12",
+          "query": "审查我们现有的 DESIGN.md、CRAFT.md 和组件规范是否完整一致，并判断基础文档能否批准。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "It judges the foundation documents instead of authoring craft rules."
+        },
+        {
+          "id": "dcf-13",
+          "query": "Define reusable selection, loading, validation, and destructive-action states for our form components.",
+          "expect": "not_trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "near_miss",
+          "reason": "State requirements and component behavior belong to component-pattern semantics."
+        },
+        {
+          "id": "dcf-14",
+          "query": "为新的团队邀请功能制定具体设计规格，包括流程、信息架构、状态和边界情况。",
+          "expect": "not_trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "near_miss",
+          "reason": "This is a task-specific feature declaration rather than durable craft guidance."
+        },
+        {
+          "id": "dcf-15",
+          "query": "Draft a privacy policy for my newsletter.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Legal-policy drafting is unrelated to interface craft standards."
+        },
+        {
+          "id": "dcf-16",
+          "query": "解释一下为什么天空是蓝色的，适合给小学生看。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "General education does not establish product design craft."
+        },
+        {
+          "id": "dcf-17",
+          "query": "Refactor this function to reduce its cyclomatic complexity.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Code refactoring has no design-craft foundation intent."
+        },
+        {
+          "id": "dcf-18",
+          "query": "帮我规划三天的杭州旅行路线。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Travel planning is outside the design suite."
+        },
+        {
+          "id": "dcf-19",
+          "query": "Compare PostgreSQL and MySQL replication strategies.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Database architecture comparison is unrelated to UI craft."
+        },
+        {
+          "id": "dcf-20",
+          "query": "把这些发票按月份分类并算出总额。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Invoice categorization does not create reusable design quality guidance."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-evaluation-foundation",
+      "cases": [
+        {
+          "id": "def-01",
+          "query": "Create EVAL.md so every design review uses the same evidence, blockers, scoring scale, and approval gate.",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Directly requests the reusable design evaluation contract."
+        },
+        {
+          "id": "def-02",
+          "query": "请为结账流程制定页面级评审标准，区分阻塞问题、建议项和缺失证据。",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Authors task-specific criteria and missing-evidence policy for future reviews."
+        },
+        {
+          "id": "def-03",
+          "query": "Define deterministic pass, conditional-pass, and fail rules for future mobile UI evaluations.",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Creates reusable verdict rules rather than judging an artifact."
+        },
+        {
+          "id": "def-04",
+          "query": "更新我们的设计评估规范：加入无障碍证据、跨设备检查、回归阻塞项和评分权重。",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Updates the standard evaluation policy and evidence requirements."
+        },
+        {
+          "id": "def-05",
+          "query": "We need review modes for quick critique, release gate, and iteration comparison, all sharing one actionable return-plan format.",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Defines reusable review modes and return-plan structure."
+        },
+        {
+          "id": "def-06",
+          "query": "为管理后台建立可复用的任务级 subchecks，要求后续 Agent 都按同一套标准审查。",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Requests consistent reusable subchecks for future Agent evaluations."
+        },
+        {
+          "id": "def-07",
+          "query": "Turn our team's subjective design feedback into a governed rubric with evidence thresholds and prioritized remediation rules.",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "Converts criticism into a durable evidence-backed evaluation system."
+        },
+        {
+          "id": "def-08",
+          "query": "Add an evaluation policy for generated interfaces that says when uncertainty, provenance, and user authorization become release blockers.",
+          "expect": "trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "positive",
+          "reason": "The output is a reusable release-blocking evaluation policy, despite the agentic subject."
+        },
+        {
+          "id": "def-09",
+          "query": "Score the live onboarding prototype against our existing EVAL.md and give me a release verdict.",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "Applies an existing standard to a rendered artifact rather than authoring the standard."
+        },
+        {
+          "id": "def-10",
+          "query": "请审查 PRODUCT.md、DESIGN.md 和 EVAL.md 之间是否矛盾，并判断这套基础文档能否交付团队。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "This asks for foundation-set readiness and cross-document consistency."
+        },
+        {
+          "id": "def-11",
+          "query": "Implement the dashboard and keep iterating until it passes the approved evaluation criteria.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "The primary request is concrete artifact production, not criteria authoring."
+        },
+        {
+          "id": "def-12",
+          "query": "Set up all foundational design documents for a brand-new product, including an initial evaluation policy.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "The evaluation document is one part of broad foundation bootstrapping."
+        },
+        {
+          "id": "def-13",
+          "query": "Define how our copilot communicates plans, asks permission, streams progress, and hands control back to the user.",
+          "expect": "not_trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "near_miss",
+          "reason": "Requests an agent experience and rendering contract, not a review policy."
+        },
+        {
+          "id": "def-14",
+          "query": "Do you think this color palette feels trustworthy?",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "near_miss",
+          "reason": "A one-off subjective opinion does not ask for a reusable evaluation contract."
+        },
+        {
+          "id": "def-15",
+          "query": "Create a five-slide investor update from these metrics.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Presentation creation is unrelated to design evaluation policy."
+        },
+        {
+          "id": "def-16",
+          "query": "修复登录接口的超时错误，并补一个单元测试。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Backend debugging does not create a design review contract."
+        },
+        {
+          "id": "def-17",
+          "query": "Draft a friendly renewal reminder email.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Email drafting has no design evaluation scope."
+        },
+        {
+          "id": "def-18",
+          "query": "请把这份访谈记录总结成用户痛点。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Research summarization is not evaluation-standard authoring."
+        },
+        {
+          "id": "def-19",
+          "query": "Calculate the month-over-month conversion change.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A metrics calculation is unrelated to a design evaluation foundation."
+        },
+        {
+          "id": "def-20",
+          "query": "写一份招聘产品设计师的职位描述。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Job-description writing does not define review criteria."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-system-foundation",
+      "cases": [
+        {
+          "id": "dsf-01",
+          "query": "Create a DESIGN.md for our fintech app covering color roles, typography, spacing, elevation, and visual principles.",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Directly requests the visual source of truth owned by this Skill."
+        },
+        {
+          "id": "dsf-02",
+          "query": "请从现有 Figma 文件中反推设计系统，整理成以后 Agent 可以遵循的 DESIGN.md。",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Reconstructs a visual design system from existing Figma evidence."
+        },
+        {
+          "id": "dsf-03",
+          "query": "Our product has five slightly different blues and inconsistent radii. Normalize the legacy styles into one approved token system.",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Standardizes inconsistent legacy visual styles and tokens."
+        },
+        {
+          "id": "dsf-04",
+          "query": "为一个新的儿童阅读应用定义视觉身份：色彩角色、字体体系、圆角、阴影和图形语言。",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Defines a new project-specific visual identity."
+        },
+        {
+          "id": "dsf-05",
+          "query": "Migrate our design tokens from the old semantic naming scheme to the new one and update DESIGN.md without losing dark-mode mappings.",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Requests visual token migration and an update to the design source of truth."
+        },
+        {
+          "id": "dsf-06",
+          "query": "分析当前 React 组件库里的颜色、字号和间距用法，重建设计系统并标注哪些是权威值。",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Infers and reconstructs the visual system from implementation."
+        },
+        {
+          "id": "dsf-07",
+          "query": "Update our existing visual foundation to add a high-contrast theme and revised type scale for enterprise dashboards.",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Updates an existing project-specific visual foundation."
+        },
+        {
+          "id": "dsf-08",
+          "query": "我们收购了两个产品，请把它们冲突的视觉 token 合并成一套统一、可实施的设计语言。",
+          "expect": "trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "positive",
+          "reason": "Unifies conflicting visual tokens into a durable design language."
+        },
+        {
+          "id": "dsf-09",
+          "query": "The UI technically uses our tokens, but every screen feels generic and flat. Turn that critique into reusable rules for hierarchy, density, motion, and content.",
+          "expect": "not_trigger",
+          "expected_skill": "design-craft-foundation",
+          "kind": "near_miss",
+          "reason": "It seeks reusable craft quality rules beyond token selection."
+        },
+        {
+          "id": "dsf-10",
+          "query": "为数据表格定义何时使用行内编辑、批量操作、空状态和错误状态，以及各状态语义。",
+          "expect": "not_trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "near_miss",
+          "reason": "The request concerns component behavior and pattern semantics, not visual tokens."
+        },
+        {
+          "id": "dsf-11",
+          "query": "Bootstrap every foundation document for this legacy app, starting from its code and screenshots.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "Creating the entire foundation routes to the bootstrap workflow."
+        },
+        {
+          "id": "dsf-12",
+          "query": "Using our approved DESIGN.md, redesign and code the account settings page.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is concrete production work consuming an existing visual system."
+        },
+        {
+          "id": "dsf-13",
+          "query": "请判断这个已渲染的首页是否遵守品牌色、排版层级和间距规范，并给出通过或失败。",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "It evaluates a rendered artifact rather than authoring the visual system."
+        },
+        {
+          "id": "dsf-14",
+          "query": "Document our customers, their jobs, and what account, workspace, and subscription mean before we touch the visuals.",
+          "expect": "not_trigger",
+          "expected_skill": "product-design-context",
+          "kind": "near_miss",
+          "reason": "The request is product and domain grounding before visual decisions."
+        },
+        {
+          "id": "dsf-15",
+          "query": "Calculate the compound interest on a five-year loan.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A finance calculation is unrelated to design-system authoring."
+        },
+        {
+          "id": "dsf-16",
+          "query": "写一个 Python 脚本，把 CSV 转成 JSON。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Generic data conversion has no visual design-system intent."
+        },
+        {
+          "id": "dsf-17",
+          "query": "Recommend three science-fiction novels about first contact.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Book recommendations are outside the design workflow."
+        },
+        {
+          "id": "dsf-18",
+          "query": "帮我整理这份会议纪要里的行动项和负责人。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Meeting-note organization does not define a visual system."
+        },
+        {
+          "id": "dsf-19",
+          "query": "Why is my Docker container restarting every few minutes?",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Infrastructure diagnosis is unrelated to visual design foundations."
+        },
+        {
+          "id": "dsf-20",
+          "query": "给这篇论文摘要做语法校对，不要改变意思。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Copyediting is not visual-system creation or reconstruction."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-system-review",
+      "cases": [
+        {
+          "id": "dsr-01",
+          "query": "Independently review our PRODUCT.md, DOMAIN.md, DESIGN.md, and COMPONENTS.md and decide whether the foundation is ready for the team.",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Explicitly requests readiness review of a foundation document set."
+        },
+        {
+          "id": "dsr-02",
+          "query": "请检查刚重建的设计基础文档是否互相矛盾、是否有无依据的假设，并给出通过或退回结论。",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Asks for independent cross-document foundation validation and verdict."
+        },
+        {
+          "id": "dsr-03",
+          "query": "Validate that our Google-style DESIGN.md remains compatible with the rest of the Vibe Design foundation.",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Google DESIGN.md compatibility is an explicit foundation-review use case."
+        },
+        {
+          "id": "dsr-04",
+          "query": "审查 PATTERNS.md、TEMPLATES.md 和代表性预览之间的可追溯性，判断团队现在能否采用。",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Evaluates traceability and representative previews for team readiness."
+        },
+        {
+          "id": "dsr-05",
+          "query": "We migrated the foundation docs to a new version. Check for semantic regressions and unsupported changes without rewriting the standards.",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Requests migration-regression review while preserving approved standards."
+        },
+        {
+          "id": "dsr-06",
+          "query": "Can you audit whether AGENTIC-INTERFACE.md conflicts with PRODUCT.md, DOMAIN.md, or the approved interaction patterns?",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Checks an agentic declaration against the broader foundation set."
+        },
+        {
+          "id": "dsr-07",
+          "query": "对更新后的 CRAFT.md、COMPONENTS.md 和 DESIGN.md 做一次独立验收，列出阻塞团队使用的问题。",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Requests independent acceptance review and blockers for updated foundation documents."
+        },
+        {
+          "id": "dsr-08",
+          "query": "Review the complete foundation package for contradictions, authority-order violations, missing evidence, and readiness to approve.",
+          "expect": "trigger",
+          "expected_skill": "design-system-review",
+          "kind": "positive",
+          "reason": "Targets governance, consistency, evidence, and approval readiness of the foundation."
+        },
+        {
+          "id": "dsr-09",
+          "query": "Review the deployed checkout page on desktop and mobile and give it a pass/fail release verdict.",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "The object under review is a rendered artifact, not foundation documents."
+        },
+        {
+          "id": "dsr-10",
+          "query": "请从零创建 PRODUCT.md、DOMAIN.md、DESIGN.md 和组件规范。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "This requests foundation creation rather than independent review."
+        },
+        {
+          "id": "dsr-11",
+          "query": "Update EVAL.md with a new scoring policy and accessibility blockers.",
+          "expect": "not_trigger",
+          "expected_skill": "design-evaluation-foundation",
+          "kind": "near_miss",
+          "reason": "Authors one specialized declaration instead of reviewing foundation readiness."
+        },
+        {
+          "id": "dsr-12",
+          "query": "Define our product-wide rules for agent progress, uncertainty, generated cards, and human approval.",
+          "expect": "not_trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "near_miss",
+          "reason": "This creates the agentic-interface contract rather than judging it."
+        },
+        {
+          "id": "dsr-13",
+          "query": "Use the approved patterns to design and implement a new account-recovery flow.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "A concrete build request takes routing precedence over foundation review."
+        },
+        {
+          "id": "dsr-14",
+          "query": "Review this pull request for TypeScript bugs and test coverage.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "near_miss",
+          "reason": "Code review is not design-foundation readiness review."
+        },
+        {
+          "id": "dsr-15",
+          "query": "Summarize the attached market report.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Document summarization is unrelated to reviewing a design foundation."
+        },
+        {
+          "id": "dsr-16",
+          "query": "帮我安排下周的项目会议议程。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Meeting planning has no foundation-review scope."
+        },
+        {
+          "id": "dsr-17",
+          "query": "Generate a QR code for this URL.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "QR generation does not inspect foundation documents."
+        },
+        {
+          "id": "dsr-18",
+          "query": "请解释什么是响应式布局。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A general design explanation is not a project foundation audit."
+        },
+        {
+          "id": "dsr-19",
+          "query": "Refactor this API client to reduce duplicate requests.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Software refactoring is unrelated to design-system foundation review."
+        },
+        {
+          "id": "dsr-20",
+          "query": "把这些英文按钮文案翻译成日语。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Translation does not assess readiness of foundation standards."
+        }
+      ]
+    },
+    {
+      "skill_name": "design-template-and-variants",
+      "cases": [
+        {
+          "id": "dtv-p01",
+          "query": "The feature spec is approved. Propose three meaningfully different information architectures for the customer dashboard before we choose a direction.",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Requests IA variants for an approved feature before detailed UI."
+        },
+        {
+          "id": "dtv-p02",
+          "query": "请根据已批准的 SPEC，为订单管理选择合适的列表与详情模板，并说明结构取舍。",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Selects reusable list/detail templates against an approved spec."
+        },
+        {
+          "id": "dtv-p03",
+          "query": "Reconstruct a reusable app-shell template from our existing admin screens, including navigation regions and responsive structure.",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Reconstructs a reusable app-shell template."
+        },
+        {
+          "id": "dtv-p04",
+          "query": "功能规则已经定稿，但页面怎么组织还没决定。请探索侧栏、分栏和工作台式三种结构方向。",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Explores meaningfully distinct structural directions after requirements are resolved."
+        },
+        {
+          "id": "dtv-p05",
+          "query": "Help us decide whether this approved analytics feature belongs in a dashboard, drill-down report, or split-view workspace.",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Asks for template fit and organization strategy."
+        },
+        {
+          "id": "dtv-p06",
+          "query": "为已确认需求的知识库设计可复用的首页、列表页和文章详情页骨架，先不做精细视觉。",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Creates reusable page templates before visual detailing."
+        },
+        {
+          "id": "dtv-p07",
+          "query": "Generate two genuinely different ways to organize the approved incident-response workflow: timeline-centered and task-centered.",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Requests contrasting information-architecture variants."
+        },
+        {
+          "id": "dtv-p08",
+          "query": "我们已有功能说明，请制定移动端应用壳层策略，明确底部导航、层级返回和全局操作的位置。",
+          "expect": "trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "positive",
+          "reason": "Defines an app-shell and navigation layout strategy for an approved feature."
+        },
+        {
+          "id": "dtv-m01",
+          "query": "We have a rough idea for subscription pausing, but no agreed rules, edge cases, or success criteria. Work those out before exploring layouts.",
+          "expect": "not_trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "near_miss",
+          "reason": "The unresolved feature specification must precede template exploration."
+        },
+        {
+          "id": "dtv-m02",
+          "query": "The structure has already been selected; now produce the polished responsive dashboard prototype with interactions and all states.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is end-to-end detailed artifact production."
+        },
+        {
+          "id": "dtv-m03",
+          "query": "给同一个已完成页面做六套颜色和字体主题，布局与信息层级保持不变。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "Cosmetic variants are excluded from structural exploration but remain a concrete artifact-design request."
+        },
+        {
+          "id": "dtv-m04",
+          "query": "Audit the rendered app shell on desktop and mobile, collect screenshots, and issue a pass or fail verdict without redesigning it.",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "This judges an existing rendered artifact rather than generating templates."
+        },
+        {
+          "id": "dtv-m05",
+          "query": "我们没有项目级设计标准，请从现有页面重建完整的产品、视觉、组件、模板和评估基础。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "Template work is only one part of the requested full foundation reconstruction."
+        },
+        {
+          "id": "dtv-m06",
+          "query": "Define the reusable semantics and behavior of tables, drawers, and confirmation dialogs across the product; page templates are already settled.",
+          "expect": "not_trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "near_miss",
+          "reason": "This is durable component and interaction-pattern definition, not page structure."
+        },
+        {
+          "id": "dtv-n01",
+          "query": "Write a unit test for the currency formatter.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Unit testing is unrelated to page templates or IA."
+        },
+        {
+          "id": "dtv-n02",
+          "query": "把这张采购清单按供应商分组并求和。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Spreadsheet aggregation is unrelated."
+        },
+        {
+          "id": "dtv-n03",
+          "query": "What time is it currently in Lisbon?",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A time lookup has no design intent."
+        },
+        {
+          "id": "dtv-n04",
+          "query": "修复 Docker 镜像构建失败的问题。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Build troubleshooting is outside design structure work."
+        },
+        {
+          "id": "dtv-n05",
+          "query": "Draft a short job description for a finance manager.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Recruiting copy is unrelated."
+        },
+        {
+          "id": "dtv-n06",
+          "query": "帮我解释这条正则表达式为什么匹配失败。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Regex debugging has no template or IA deliverable."
+        }
+      ]
+    },
+    {
+      "skill_name": "feature-design-spec",
+      "cases": [
+        {
+          "id": "fds-p01",
+          "query": "Before drawing anything, turn our rough idea for team invitations into an interaction spec with user goals, states, rules, edge cases, and acceptance criteria.",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Explicitly requests a complete pre-UI interaction specification."
+        },
+        {
+          "id": "fds-p02",
+          "query": "我们想做退款申请功能，但成功条件和异常路径都没定义，请先梳理成可批准的功能设计说明。",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "The feature lacks defined success conditions and edge paths."
+        },
+        {
+          "id": "fds-p03",
+          "query": "Reconstruct the missing specification for the bulk editor by studying how the current product behaves, including conflicts and unsaved changes.",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Reconstructs a missing feature spec from an existing product."
+        },
+        {
+          "id": "fds-p04",
+          "query": "请把新的客服工单详情页需求转成有证据支撑的交互规范，先不要生成 UI。",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Asks for an evidence-backed page interaction spec before generation."
+        },
+        {
+          "id": "fds-p05",
+          "query": "We know we need an agent approval step, but not when it appears or what happens after denial. Define the behavior and success criteria before prototyping.",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Unresolved agent interaction behavior requires a feature specification."
+        },
+        {
+          "id": "fds-p06",
+          "query": "现有 SPEC 没覆盖离线、重试和部分成功，请根据产品证据更新这份同步流程说明。",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Updates an incomplete feature spec with missing interaction states."
+        },
+        {
+          "id": "fds-p07",
+          "query": "Clarify and document the end-to-end rules for a new multi-step vendor onboarding form so design and engineering agree before UI generation.",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Turns an unresolved workflow request into an agreed pre-generation spec."
+        },
+        {
+          "id": "fds-p08",
+          "query": "先研究当前筛选器的实际行为，再为即将重做的搜索体验写出状态、约束、错误处理与验收标准。",
+          "expect": "trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "positive",
+          "reason": "Uses existing evidence to specify a substantial redesign."
+        },
+        {
+          "id": "fds-m01",
+          "query": "The checkout SPEC.md is approved. Now redesign the full flow and deliver an interactive prototype with loading and failure states.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "An approved spec exists and the request is concrete artifact execution."
+        },
+        {
+          "id": "fds-m02",
+          "query": "功能说明已经批准，请只比较三种订单详情页的信息架构，不要进入视觉设计。",
+          "expect": "not_trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "near_miss",
+          "reason": "With the spec resolved, the task is structural variant exploration."
+        },
+        {
+          "id": "fds-m03",
+          "query": "Change the approved primary button from blue to our new brand green; behavior and acceptance criteria stay exactly the same.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "A purely cosmetic approved change bypasses feature specification but still routes to concrete design execution."
+        },
+        {
+          "id": "fds-m04",
+          "query": "我们还没有任何产品、领域或设计基础文档，请先为整个项目从零建立完整标准。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "This asks for the complete project foundation, not one feature spec."
+        },
+        {
+          "id": "fds-m05",
+          "query": "Freeze the current dashboard prototype and judge whether its rendered interactions satisfy the already approved feature specification.",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "It evaluates evidence against an existing spec instead of authoring one."
+        },
+        {
+          "id": "fds-m06",
+          "query": "Document the reusable modal, toast, and inline-validation behavior that every future feature should follow.",
+          "expect": "not_trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "near_miss",
+          "reason": "The request defines durable cross-feature component patterns."
+        },
+        {
+          "id": "fds-n01",
+          "query": "Proofread this investor update for grammar.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Proofreading is unrelated to feature interaction design."
+        },
+        {
+          "id": "fds-n02",
+          "query": "计算 2025 年每个月的同比销售增长率。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "This is a numerical analysis request."
+        },
+        {
+          "id": "fds-n03",
+          "query": "Upgrade the repository from Node 20 to Node 22 and fix failing tests.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A runtime upgrade is not feature specification work."
+        },
+        {
+          "id": "fds-n04",
+          "query": "推荐三本适合初学者的摄影书。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Book recommendations are outside the suite."
+        },
+        {
+          "id": "fds-n05",
+          "query": "Create a cron job that backs up the database every night.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Infrastructure automation has no feature-design deliverable."
+        },
+        {
+          "id": "fds-n06",
+          "query": "把这份英文合同摘要翻译成中文。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Translation is unrelated."
+        }
+      ]
+    },
+    {
+      "skill_name": "product-design-context",
+      "cases": [
+        {
+          "id": "pdc-01",
+          "query": "Help us create PRODUCT.md and DOMAIN.md for a new subscription billing platform, including users, jobs, and core business rules.",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Explicitly requests the product and domain declarations this Skill owns."
+        },
+        {
+          "id": "pdc-02",
+          "query": "我们准备做医院排班产品，请先梳理医生、护士、科室管理员各自的目标、权限和关键业务概念。",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Asks for users, jobs, permissions, and domain semantics before design."
+        },
+        {
+          "id": "pdc-03",
+          "query": "Reverse-engineer the product model behind our existing marketplace: who the actors are, what a listing means, and which transaction rules the UI must respect.",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Reconstructs product and domain truth from an existing product."
+        },
+        {
+          "id": "pdc-04",
+          "query": "把现有 SaaS 的截图、帮助文档和术语表整理成一份可供后续界面设计使用的产品上下文。",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Extracts durable product context from existing evidence for later UI work."
+        },
+        {
+          "id": "pdc-05",
+          "query": "Before anyone redesigns checkout, document the difference between account owner, payer, beneficiary, invoice, and settlement in our product.",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Clarifies business entities and semantics that ground later design."
+        },
+        {
+          "id": "pdc-06",
+          "query": "为跨境电商项目补齐 PRODUCT.md：目标用户、核心任务、成功指标、范围边界和不做什么。",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Directly requests product declaration content."
+        },
+        {
+          "id": "pdc-07",
+          "query": "Our team disagrees about whether a workspace, organization, and tenant are the same thing. Establish the canonical domain language and relationships.",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Establishes canonical domain concepts and relationships."
+        },
+        {
+          "id": "pdc-08",
+          "query": "从正在运行的客服系统中提炼业务约束，形成以后 Agent 设计任何工单界面都必须遵守的领域规则。",
+          "expect": "trigger",
+          "expected_skill": "product-design-context",
+          "kind": "positive",
+          "reason": "Reconstructs reusable domain rules from production behavior."
+        },
+        {
+          "id": "pdc-09",
+          "query": "Set up the complete design foundation for this product—product/domain, visual system, craft rules, components, patterns, and evaluation policy.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "Whole-foundation creation takes routing precedence over one declaration Skill."
+        },
+        {
+          "id": "pdc-10",
+          "query": "请为“批量退款”功能写一份六层设计规格，包含用户目标、信息架构、状态和验收标准。",
+          "expect": "not_trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "near_miss",
+          "reason": "This is a task-specific feature specification, not durable product/domain authoring."
+        },
+        {
+          "id": "pdc-11",
+          "query": "Design and implement the onboarding flow for the personas already documented in PRODUCT.md.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "A concrete design/build request takes precedence and consumes existing context."
+        },
+        {
+          "id": "pdc-12",
+          "query": "我们已经明确业务模型，现在请定义品牌色、字体、间距和视觉角色，并生成 DESIGN.md。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "near_miss",
+          "reason": "The request is for visual system truth, explicitly outside product/domain scope."
+        },
+        {
+          "id": "pdc-13",
+          "query": "Define when our domain concept called a case should appear as a table row, card, or detail header, including component states.",
+          "expect": "not_trigger",
+          "expected_skill": "component-pattern-foundation",
+          "kind": "near_miss",
+          "reason": "The business concept is known; the request concerns reusable UI semantics and states."
+        },
+        {
+          "id": "pdc-14",
+          "query": "审查现有 PRODUCT.md 和 DOMAIN.md 是否互相矛盾、遗漏关键角色，并给出是否通过的结论。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "It judges existing foundation documents rather than creating or reconstructing them."
+        },
+        {
+          "id": "pdc-15",
+          "query": "Write a SQL query that counts daily active users.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A data query is unrelated to product/domain design declarations."
+        },
+        {
+          "id": "pdc-16",
+          "query": "把这段英文发布公告翻译成中文。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Translation work does not establish product or domain context."
+        },
+        {
+          "id": "pdc-17",
+          "query": "Explain the difference between TCP and UDP to a beginner.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "General technical education is outside the design suite."
+        },
+        {
+          "id": "pdc-18",
+          "query": "帮我写一封请假邮件，语气自然一点。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Personal email drafting has no product-design foundation intent."
+        },
+        {
+          "id": "pdc-19",
+          "query": "Find and fix the memory leak in this Node.js worker.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Software debugging is unrelated to product/domain documentation."
+        },
+        {
+          "id": "pdc-20",
+          "query": "Summarize this quarter's sales spreadsheet by region.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Spreadsheet analysis does not call for product/domain foundation work."
+        }
+      ]
+    },
+    {
+      "skill_name": "vibe-design-bootstrap",
+      "cases": [
+        {
+          "id": "vdb-p01",
+          "query": "我们刚启动一个医疗预约产品，想从零建立一套完整、可复用的设计文档体系，方便之后让 Agent 参与页面设计。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Requests a complete reusable foundation for a new product and Agent-assisted design."
+        },
+        {
+          "id": "vdb-p02",
+          "query": "Our product has grown without any design standards. Set up the full Vibe Design documentation foundation so future teams work consistently.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Explicitly asks to bootstrap a complete documentation foundation."
+        },
+        {
+          "id": "vdb-p03",
+          "query": "请根据现有的十几个生产页面，反向整理并重建我们缺失的产品、视觉、组件、模板和评估标准。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Reconstructs the whole foundation from existing UI evidence."
+        },
+        {
+          "id": "vdb-p04",
+          "query": "We inherited a legacy SaaS with scattered Figma notes and no coherent system. Rebuild a governed, reusable design foundation from what exists.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Requests coordinated reconstruction of reusable standards."
+        },
+        {
+          "id": "vdb-p05",
+          "query": "Before we let multiple AI agents design features, standardize the durable product, craft, component, template, and evaluation documents for this app.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Coordinates several foundation declarations for Agent-assisted work."
+        },
+        {
+          "id": "vdb-p06",
+          "query": "我们准备把三个风格不一致的内部工具统一起来，请先搭建设计基础文档和治理方式，而不是直接改某个页面。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "The goal is cross-product foundation standardization, not a single artifact."
+        },
+        {
+          "id": "vdb-p07",
+          "query": "Create the complete foundation package for our new fintech product: product and domain truth, visual and craft rules, components, templates, and evaluation policy.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Explicitly coordinates the complete set of durable foundation declarations."
+        },
+        {
+          "id": "vdb-p08",
+          "query": "现有 UI 可以用，但所有规则都只存在设计师脑中。请把它们系统化为一套可版本化、可复用的 Vibe Design 基础。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "positive",
+          "reason": "Turns implicit existing standards into a complete versioned foundation."
+        },
+        {
+          "id": "vdb-m01",
+          "query": "基础文档已经批准了，请直接重设计我们的订阅结账流程，并做出可交互原型。",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "near_miss",
+          "reason": "This is a concrete end-to-end redesign request using an existing foundation."
+        },
+        {
+          "id": "vdb-m02",
+          "query": "We only need to document the product goals, user roles, and domain constraints for the marketplace; leave visual and component standards alone.",
+          "expect": "not_trigger",
+          "expected_skill": "product-design-context",
+          "kind": "near_miss",
+          "reason": "The request is limited to the product and domain declaration."
+        },
+        {
+          "id": "vdb-m03",
+          "query": "请为现有品牌补齐色彩、排版、间距和图像风格规范，其他基础文档都已经齐全。",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-foundation",
+          "kind": "near_miss",
+          "reason": "Only the visual identity and token declaration is missing."
+        },
+        {
+          "id": "vdb-m04",
+          "query": "Audit our PRODUCT.md, DESIGN.md, COMPONENTS.md, and EVAL.md for contradictions and tell us whether the foundation is sound.",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "It judges existing foundation documents rather than creating them."
+        },
+        {
+          "id": "vdb-m05",
+          "query": "We already have the standards; define the interaction specification and acceptance criteria for a new bulk-edit workflow before anyone draws UI.",
+          "expect": "not_trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "near_miss",
+          "reason": "This is a task-specific feature specification within an approved foundation."
+        },
+        {
+          "id": "vdb-m06",
+          "query": "我们的基础文档已经完整，只缺少 Agent 在建议、执行和请求授权时应遵守的界面契约。",
+          "expect": "not_trigger",
+          "expected_skill": "agentic-interface-foundation",
+          "kind": "near_miss",
+          "reason": "The request is limited to the agentic-interface declaration."
+        },
+        {
+          "id": "vdb-n01",
+          "query": "帮我把这段产品发布公告翻译成英文。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Translation is unrelated to design foundations."
+        },
+        {
+          "id": "vdb-n02",
+          "query": "Summarize yesterday's sales CSV and calculate the median order value.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Data analysis is outside the design skill suite."
+        },
+        {
+          "id": "vdb-n03",
+          "query": "修复登录 API 偶发返回 500 的问题，并补一条回归测试。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Backend debugging is not foundation authoring."
+        },
+        {
+          "id": "vdb-n04",
+          "query": "Draft a polite email asking the landlord to repair the heater.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Email drafting is unrelated."
+        },
+        {
+          "id": "vdb-n05",
+          "query": "查一下上海周末会不会下雨。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A weather lookup has no design-system intent."
+        },
+        {
+          "id": "vdb-n06",
+          "query": "Deploy the current backend image to production and watch the error rate.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Deployment and monitoring are outside this design foundation workflow."
+        }
+      ]
+    },
+    {
+      "skill_name": "vibe-design-execute",
+      "cases": [
+        {
+          "id": "vde-p01",
+          "query": "Use our approved design foundation to redesign the account onboarding flow, produce a clickable prototype, cover error states, and refine it after review.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Requests an end-to-end redesign and real prototype with states and iteration."
+        },
+        {
+          "id": "vde-p02",
+          "query": "请按照项目现有规范，设计并完成一个新的运营数据看板，包含筛选、空状态、加载状态和移动端适配。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Concrete dashboard production with interaction states triggers execution."
+        },
+        {
+          "id": "vde-p03",
+          "query": "Build out the real browser prototype for the approved returns workflow and keep iterating until the rendered evidence meets our evaluation policy.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Asks to create and evaluate a concrete governed artifact end to end."
+        },
+        {
+          "id": "vde-p04",
+          "query": "把现有的项目列表页大幅重做成适合高密度协作的体验，从结构探索一直做到最终可用设计。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "A substantial screen redesign from exploration through artifact completion is execution."
+        },
+        {
+          "id": "vde-p05",
+          "query": "Design an agent-assisted incident response workspace, including approval moments, progress states, failure recovery, and a working prototype.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Concrete agentic experience design with states and prototype requires execution."
+        },
+        {
+          "id": "vde-p06",
+          "query": "我们有批准过的功能说明，请把新的批量邀请流程真正做进当前设计文件，并检查各关键路径。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Updates the real design artifact for an approved feature."
+        },
+        {
+          "id": "vde-p07",
+          "query": "Take the existing ecommerce homepage and substantially extend it with a personalized discovery section, responsive behavior, and all interaction states.",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Substantially extends a real page and covers behavior and states."
+        },
+        {
+          "id": "vde-p08",
+          "query": "从需求澄清开始，为客服团队做一个工单详情页；探索结构、完成高保真原型，再根据截图评估结果迭代。",
+          "expect": "trigger",
+          "expected_skill": "vibe-design-execute",
+          "kind": "positive",
+          "reason": "Explicitly requests the whole design execution loop for a concrete screen."
+        },
+        {
+          "id": "vde-m01",
+          "query": "We are starting from scratch and need the complete reusable product, visual, component, template, and evaluation documentation before designing screens.",
+          "expect": "not_trigger",
+          "expected_skill": "vibe-design-bootstrap",
+          "kind": "near_miss",
+          "reason": "This is foundation creation, not production of a concrete artifact."
+        },
+        {
+          "id": "vde-m02",
+          "query": "请只评审这个已经冻结版本的结账原型，收集截图和交互证据并给出是否通过，不要改设计。",
+          "expect": "not_trigger",
+          "expected_skill": "design-artifact-evaluator",
+          "kind": "near_miss",
+          "reason": "The user requests independent judgment of a rendered artifact with no edits."
+        },
+        {
+          "id": "vde-m03",
+          "query": "Before any UI work, write the interaction spec and measurable success conditions for our new refund request flow.",
+          "expect": "not_trigger",
+          "expected_skill": "feature-design-spec",
+          "kind": "near_miss",
+          "reason": "The deliverable is only a pre-generation feature specification."
+        },
+        {
+          "id": "vde-m04",
+          "query": "The feature spec is approved. Give us three genuinely different information architectures for the analytics page, but stop before detailed UI.",
+          "expect": "not_trigger",
+          "expected_skill": "design-template-and-variants",
+          "kind": "near_miss",
+          "reason": "The request stops at template and structural alternatives."
+        },
+        {
+          "id": "vde-m05",
+          "query": "Review the design foundation documents for missing authority rules, inconsistencies, and governance risks; do not create a screen.",
+          "expect": "not_trigger",
+          "expected_skill": "design-system-review",
+          "kind": "near_miss",
+          "reason": "This evaluates documentation rather than executing product design."
+        },
+        {
+          "id": "vde-m06",
+          "query": "The prototype is finished and approved; push the existing production build live without changing the experience.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "near_miss",
+          "reason": "Deployment alone is explicitly outside design execution."
+        },
+        {
+          "id": "vde-n01",
+          "query": "Explain how DNS resolution works to someone new to networking.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A networking explanation is unrelated."
+        },
+        {
+          "id": "vde-n02",
+          "query": "把这个会议录音整理成三条行动项。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Meeting summarization is not UI or product design."
+        },
+        {
+          "id": "vde-n03",
+          "query": "Refactor the payment service to reduce database queries.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Backend performance refactoring is out of scope."
+        },
+        {
+          "id": "vde-n04",
+          "query": "帮我规划一周的低碳晚餐菜单。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Meal planning has no design execution intent."
+        },
+        {
+          "id": "vde-n05",
+          "query": "Find the latest quarterly revenue reported by this company.",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "Financial fact lookup is unrelated."
+        },
+        {
+          "id": "vde-n06",
+          "query": "写一个脚本把日志文件按日期归档。",
+          "expect": "not_trigger",
+          "expected_skill": "none",
+          "kind": "negative",
+          "reason": "A utility scripting task is not a product design request."
+        }
+      ]
+    }
+  ]
+}

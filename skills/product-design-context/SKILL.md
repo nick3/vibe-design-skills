@@ -38,6 +38,19 @@ Use this order when sources disagree:
 6. isolated legacy copy, screens or implementation details.
 
 Do not silently resolve a meaningful conflict using frequency alone. Record the conflict, its impact and the decision needed.
+Treat a role or approval authority as evidence only when it is explicitly
+supplied. A request to create a draft authorizes that scoped work; it does not
+by itself establish that the requester is the product or design owner.
+An unspecified permission is unknown, not an approved denial. The authoring
+Agent must not infer authorization or introduce/execute a new action from an
+unknown permission, but it also must not rewrite the domain model as “denied by
+default.” Record the unresolved action/role cell and return it to the
+authoritative policy owner.
+In `DOMAIN.md`, record only the unknown cell and its consequence. Put temporary
+Agent execution safeguards or UI hypotheses in the feature/component layer and
+label them provisional; do not make hidden, disabled, unavailable, or
+non-executable presentation an approved domain rule. Never enable a new action
+from an unknown permission.
 
 ## Workflow
 
@@ -54,6 +67,9 @@ Determine:
 - success signals and known risks.
 
 Separate product facts from proposed positioning language.
+Derived product principles remain inferred or proposed unless an authoritative
+source explicitly states them. Do not label an interpretation “confirmed”
+merely because it is compatible with an approved job or outcome.
 
 ### 2. Model the domain
 
@@ -114,3 +130,8 @@ After approval, record the decision, date and owner in `design/DECISIONS.md` if 
 - Do not turn an aspirational marketing claim into a domain fact.
 - Do not infer permissions from visual affordances alone.
 - Do not present inferred research conclusions as user evidence.
+- Do not invent a risk/severity taxonomy when the organization has not supplied
+  one; describe consequence and uncertainty instead.
+- Do not extend an approved deprecated/forbidden synonym list by analogy.
+  Record additional inconsistent terms as observed migration candidates until
+  the domain owner approves their disposition.

@@ -66,6 +66,7 @@ request
 <target-project>/
 ├── DESIGN.md
 └── design/
+    ├── README.md                  # status and adoption front door
     ├── PRODUCT.md
     ├── DOMAIN.md
     ├── CRAFT.md
@@ -79,7 +80,8 @@ request
     ├── DECISIONS.md
     ├── GAPS.md
     ├── AUDIT.md                   # reconstruction/update mode
-    ├── REVIEW.md                  # independent foundation review
+    ├── REVIEW.md                  # separate reviewer/context only
+    ├── SELF-CHECK.md              # optional author check; never Gate C
     └── features/
         └── <feature-id>/
             ├── SPEC.md
@@ -115,10 +117,27 @@ Drafts use `.draft.md` until the relevant approval gate is passed. A skill must 
 5. Require human approval when product intent, design direction, component meaning, generation freedom, sensitive action, or release policy materially changes.
 6. Preserve traceability from task to artifact to evidence to finding to source rule.
 7. Use representative artifacts to validate a system, but never hard-code a fixture's values into a reusable skill.
-8. Keep generator and evaluator roles separate; evaluate visible evidence rather than hidden intent.
-9. Let blockers override averages, and let missing evidence remain visible.
+8. Keep generator and evaluator roles and reasoning contexts separate; evaluate visible evidence rather than hidden intent.
+9. Let approved blockers override averages, and keep advisory readiness limitations distinct from release gates.
 10. Treat repeated failures as candidates for governance review, not automatic new standards.
+11. Keep workflow methods and tool provenance separate from target-product
+    evidence and decisions.
+12. Preserve unknown permissions as unknown; do not convert incomplete policy
+    into a product denial rule.
+
+Do not create `REVIEW.md` in the same reasoning pass that authors the candidate
+foundation. Freeze the candidate and hand it to a separate Agent, thread, or
+human reviewer; if that is unavailable, leave Gate C pending.
 
 ## Validation status
 
-All twelve Skill drafts, bundled templates/references, and 37 initial eval prompts are included. Static structural validation has been prepared; behavioral comparisons against no-skill baselines and human design review have not yet been run. Follow `VALIDATION.md` before team-wide distribution.
+All twelve release-candidate Skills, bundled templates/references, Codex
+interface metadata files, and 37 initial eval prompts are included. `bun run
+check` validates package integrity, the 240-case trigger fixture, and exact local
+CLI discovery. Representative
+comparisons for both orchestration entrypoints are recorded in
+[`docs/releases/v0.1.0-rc.1-validation.md`](../docs/releases/v0.1.0-rc.1-validation.md).
+The first B2B reconstruction comparison also passed two independent Agent
+review lenses; see the linked report. Rendered cross-layer scenarios and
+independent human review remain required before stable team-wide adoption.
+Follow `VALIDATION.md`.
