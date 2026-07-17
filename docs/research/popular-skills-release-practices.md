@@ -3,8 +3,8 @@
 Research date: 2026-07-17
 
 > Outcome update: the repository owner selected the MIT License on 2026-07-17.
-> The candidate now passes the legal, package, security, behavioral, Linux,
-> Windows, and candidate-branch distribution gates. This document retains the
+> Public `main` now passes the legal, package, security, behavioral, Linux,
+> Windows, and 12/12 remote-distribution gates. This document retains the
 > pre-release gap analysis that led to those changes.
 
 ## Executive conclusion

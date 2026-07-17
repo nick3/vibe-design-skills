@@ -4,6 +4,8 @@ All notable suite-level changes are documented here. The project follows [Semant
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-07-17
+
 ### Added
 
 - Codex-facing `agents/openai.yaml` metadata for all 12 Skills.
@@ -30,7 +32,8 @@ All notable suite-level changes are documented here. The project follows [Semant
 - Constrained evaluation aggregate scores and thresholds to the documented 0–10 scale.
 - Tightened bootstrap evidence handling so “not supplied” is never treated as proof that an artifact does not exist.
 - Made feature execution progressively discover project evidence before requesting domain, API, design-system, or evaluation details.
-- Updated validation dependencies to vulnerability-free versions and removed an unnecessary transitive format package.
+- Updated validation dependencies to AJV 8.20.0 and YAML 2.9.0, while
+  removing a duplicate transitive YAML installation.
 - Pinned every GitHub Action to an immutable current stable commit and disabled
   an inapplicable `uv` cache with no dependency manifest.
 - Separated author self-checks from independent foundation review and separated
@@ -48,3 +51,6 @@ All notable suite-level changes are documented here. The project follows [Semant
   descriptive error instead of a runtime exception.
 - Split the default public-repository check from the arbitrary-source check so
   both local release verification and candidate-ref CI remain explicit.
+
+[Unreleased]: https://github.com/nick3/vibe-design-skills/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/nick3/vibe-design-skills/releases/tag/v0.1.0
