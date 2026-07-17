@@ -296,3 +296,31 @@ all referenced resources; the license, provenance, support, and security routes 
 unambiguous; and the published evaluation report demonstrates useful design outcomes
 on contrasting cases with human review. Badge, catalog grouping, changelog, and tag
 should then be added as the release-facing record of that verified state.
+
+## Follow-up maintainability audit
+
+A second sample on the same research date added three highly adopted,
+actively released catalogs:
+
+| Source | Observed public adoption | Relevant practice |
+|---|---:|---|
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | about 79k stars | Repository Agent instructions, LF normalization, trigger/routing evals, and a real plugin-install job |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | about 24k stars | Repository Agent instructions, LF normalization, test matrices, changelog/version gates, and deterministic release automation |
+| [google/skills](https://github.com/google/skills) | about 15k stars | A minimal portable catalog with an explicit Apache-2.0 license and contribution policy |
+
+The official
+[`vercel-labs/skills` CI](https://github.com/vercel-labs/skills/blob/main/.github/workflows/ci.yml)
+also tests the installer on both Linux and Windows. These examples support three
+additional maintainability decisions for this repository:
+
+1. add a root `AGENTS.md` so future Agent-authored changes preserve package,
+   evidence, authority, evaluation, and release invariants;
+2. add `.gitattributes` with LF normalization so byte-level installation checks
+   and text artifacts remain deterministic across contributor platforms;
+3. run the complete local discovery and clean-install suite on Windows as well
+   as Linux.
+
+Automatic tagging was not copied. This suite requires an explicit owner license
+decision, behavioral evidence, and a post-merge public-distribution check, so a
+deliberate checklist-driven release remains safer than making every changelog
+heading a release trigger.

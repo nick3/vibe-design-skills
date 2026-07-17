@@ -137,7 +137,8 @@ The repository includes deterministic release checks for:
 - the score recomputation helper;
 - deterministic trigger-routing result validation and scoring;
 - exact discovery of all 12 Skills by the official CLI;
-- a clean Codex project installation that preserves every bundled file;
+- clean Linux and Windows Codex project installations that preserve every
+  bundled file;
 - official Agent Skills reference validation of every Skill in CI;
 - a post-push install of the public default branch with exact source-to-install
   file comparison.

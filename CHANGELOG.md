@@ -19,6 +19,8 @@ All notable suite-level changes are documented here. The project follows [Semant
 - Versioned release-candidate reports with package, security, reference-format,
   remote-baseline, entrypoint, and iterative reconstruction comparison evidence.
 - A non-normative B2B reconstruction fixture and governance-integrity regression test.
+- Repository-level Agent contribution instructions, deterministic LF
+  normalization, and Windows portability validation.
 
 ### Changed
 
